@@ -1,13 +1,13 @@
 # Instructions for building Staggered Multigrid on Summit
 We need to build QUDA and MILC in sequence.  QUDA can be built with a single script. Due to the need to edit some files in MILC after download, it is built in two steps.
 The procedure is described below.
-* *Generate build scripts*: 
+* **Generate build scripts**: 
 Edit the folder names in dict_pars['build_dir'] and dict_pars['run_dir'] to point to the appropriate locations for your run. Run the entire jupyter notebook. It will copy all install scripts to the desired location. \
 OR  \
 Alternatively, copy the contents of the folder sample_install_scripts to the required location. Also create empty directories inside the build_directory
 ``` mkdir QUDA/src install ```
 
-* *Build instructions*: 
+* **Build instructions**: 
   - ```cd <build_dir>``` 
   - ```./install_scripts/build_quda.sh 2>&1 | tee op_quda.out ```
   - ```./install_scripts/build_milc1.sh 2>&1 | tee op_milc1.out ```
