@@ -19,7 +19,7 @@ You need a ```build_dir``` and ```run_dir```.
   - ```./install_scripts/build_quda.sh 2>&1 | tee op_quda.out ```
   - ```./install_scripts/build_milc1.sh 2>&1 | tee op_milc1.out ```
   - Make edits to files as listed below: 
-    - In the file [milc_qcd/ks_spectrum/compile_ks_spectrum_hisq_quda.sh](https://github.com/milc-qcd/milc_qcd/blob/develop/ks_spectrum/compile_ks_spectrum_hisq_quda.sh), uncomment lines 42-45 for NVIDIA gpus.
+    - In the file [milc_qcd/ks_spectrum/compile_ks_spectrum_hisq_quda.sh](https://github.com/milc-qcd/milc_qcd/blob/develop/ks_spectrum/compile_ks_spectrum_hisq_quda.sh), uncomment lines 42-45 (for NVIDIA gpus).
   - ```./install_scripts/build_milc2.sh 2>&1 | tee op_milc2.out ```
 
 This should build both QUDA and MILC. 
