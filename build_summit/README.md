@@ -6,7 +6,7 @@ Edit the folder names in *dict_pars['build_dir']* and *dict_pars['run_dir']* to 
 OR  \
 Alternatively, 
   - Manually create empty directories inside ```build_dir``` as ``` mkdir QUDA/src install install_scripts```
-  - Copy the contents of the folder sample_install_scripts ```build_dir```
+  - Copy the contents of the folder *sample_install_scripts* to ```build_dir/install_scripts/```
   - Edit the contents of the files ```build_quda.sh```, ``` build_milc1.sh``` & ``` build_milc2.sh``` : Modify ```script_loc=<build_directory>/install_scripts```
 
 * **Build instructions**: 
