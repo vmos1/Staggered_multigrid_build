@@ -37,5 +37,3 @@ This should build both QUDA and MILC.
 | ```sbatch run_tune_slurm.sh``` | Submit tuning run |
 | ```sbatch run_full_slurm.sh``` | Submit full run after completion of tuning run | 
 
-
-A sample build document is provided here. 
