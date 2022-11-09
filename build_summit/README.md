@@ -1,4 +1,4 @@
-# Instructions for building Staggered Multigrid on Summit
+# Instructions for building and running Staggered Multigrid on Summit
 We need to build QUDA and MILC in sequence.  QUDA can be built with a single script. Due to the need to edit some files in MILC after download, it is built in two steps.
 The procedure is described below.
 ## **Generate build scripts**: 
@@ -23,7 +23,7 @@ In the file [milc_qcd/ks_spectrum/compile_ks_spectrum_hisq_quda.sh](https://gith
 
 This should build both QUDA and MILC. 
 
-# Instructions for running code
+## Instructions for running code on Summit
 
 | Command | Description | 
 | -- | -- |
