@@ -10,8 +10,9 @@ You need a ```build_dir``` and ```run_dir```.
  **OR Alternatively**  
 - Manually copy and edit scripts : 
     - Manually create empty directories inside ```build_dir``` as ``` mkdir QUDA/src install install_scripts```
-    - Copy the contents of the folder *sample_install_scripts* to ```<build_dir>/install_scripts/```
-    - Edit the contents of the files ```build_quda.sh```, ``` build_milc1.sh``` & ``` build_milc2.sh``` : Modify ```script_loc=<build_directory>/install_scripts```
+    - Copy the contents of the folder *sample_install_scripts* in the git-repo to ```<build_dir>/install_scripts/```
+    - Edit the contents of the files ```build_quda.sh```, ``` build_milc1.sh``` & ``` build_milc2.sh``` : 
+      - Modify ```script_loc=<build_directory>/install_scripts```
 
 ## **Build instructions**: 
   - ```cd <build_dir>``` 
