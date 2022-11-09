@@ -4,8 +4,11 @@ The procedure is described below.
 * **Generate build scripts**: You need a ```build_dir``` and ```run_dir```.
 Edit the folder names in *dict_pars['build_dir']* and *dict_pars['run_dir']* to point to the appropriate locations for your run. Run the entire jupyter notebook. It will copy all install scripts to the desired location. \
 OR  \
-Alternatively, manually create empty directories inside ```build_dir``` as ``` mkdir QUDA/src install install_scripts```.
-Also, copy the contents of the folder sample_install_scripts ```build_dir```
+Alternatively, 
+  - Manually create empty directories inside ```build_dir``` as ``` mkdir QUDA/src install install_scripts```
+  - Copy the contents of the folder sample_install_scripts ```build_dir```
+  - Edit the contents of the files ```build_quda.sh```, ``` build_milc1.sh``` & ``` build_milc2.sh``` : Modify ```script_loc=<build_directory>/install_scripts```
+
 * **Build instructions**: 
   - ```cd <build_dir>``` 
   - ```./install_scripts/build_quda.sh 2>&1 | tee op_quda.out ```
