@@ -29,8 +29,8 @@ This should build both QUDA and MILC.
 | ```cp build_summit/sample_input_files/* .```  | Copy the input files from build_summit/sample_input_files to the required location |
 | ```mkdir rand``` | Create directory for storing random numbers | 
 | ```ln -s /gpfs/alpine/proj-shared/lgt104/detar/lat``` | Create sym link for gauge configuration | 
-| Edit the input*.kpp and mgparams*.txt files | Edit for varying local volume, MG layers, etc. | 
-| Edit the run-mg-tune.lsf and run-mg-full.lsf files | Add the correct location of the build directory for PROJ in line 15 |
+| Edit the `input*.kpp` and `mgparams*.txt` files | Edit for varying local volume, MG layers, etc. | 
+| Edit the `run-mg-tune.lsf` and `run-mg-full.lsf` files | Add the correct location of the build directory for PROJ in line 15 |
 | ```bsub run_tune_slurm.sh``` | Submit tuning run |
 | ```bsub run_tune_slurm.sh``` | Submit full run | 
 
