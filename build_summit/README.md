@@ -10,7 +10,7 @@ You need a ```build_dir``` and ```run_dir```.
  **OR Alternatively**  
 - Manually copy and edit scripts : 
     - Manually create empty directories inside ```build_dir``` as ``` mkdir QUDA/src install install_scripts```
-    - Copy the contents of the folder *sample_install_scripts* to ```build_dir/install_scripts/```
+    - Copy the contents of the folder *sample_install_scripts* to ```<build_dir>/install_scripts/```
     - Edit the contents of the files ```build_quda.sh```, ``` build_milc1.sh``` & ``` build_milc2.sh``` : Modify ```script_loc=<build_directory>/install_scripts```
 
 ## **Build instructions**: 
@@ -18,7 +18,7 @@ You need a ```build_dir``` and ```run_dir```.
   - ```./install_scripts/build_quda.sh 2>&1 | tee op_quda.out ```
   - ```./install_scripts/build_milc1.sh 2>&1 | tee op_milc1.out ```
   - Make edits to files as listed below: 
-In the file [milc_qcd/ks_spectrum/compile_ks_spectrum_hisq_quda.sh](https://github.com/milc-qcd/milc_qcd/blob/develop/ks_spectrum/compile_ks_spectrum_hisq_quda.sh), uncomment lines 42-45 for NVIDIA Gpus.
+    - In the file [milc_qcd/ks_spectrum/compile_ks_spectrum_hisq_quda.sh](https://github.com/milc-qcd/milc_qcd/blob/develop/ks_spectrum/compile_ks_spectrum_hisq_quda.sh), uncomment lines 42-45 for NVIDIA gpus.
   - ```./install_scripts/build_milc2.sh 2>&1 | tee op_milc2.out ```
 
 This should build both QUDA and MILC. 
@@ -35,15 +35,6 @@ This should build both QUDA and MILC.
 | Edit the `run-mg-tune.lsf` and `run-mg-full.lsf` files | Add the correct location of the build directory for PROJ in line 15 |
 | ```bsub run_tune_slurm.sh``` | Submit tuning run |
 | ```bsub run_tune_slurm.sh``` | Submit full run | 
-
-
-
-
-
-
-
-
-
 
 
 A sample build document is provided here. 
