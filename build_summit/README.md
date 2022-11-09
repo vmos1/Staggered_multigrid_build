@@ -4,13 +4,13 @@ The procedure is described below.
 1. Generate build scripts: 
 Edit the folder names in dict_pars['build_dir'] and dict_pars['run_dir'] to point to the appropriate locations for your run. Run the entire jupyter notebook. It will copy all install scripts to the desired location.
 Alternatively, copy the contents of the folder sample_install_scripts to the required location.
-2 Build instructions: 
-a cd 
-b ./install_scripts/build_quda.sh 2>&1 | tee op_quda.out
-c ./install_scripts/build_milc1.sh 2>&1 | tee op_milc1.out
-d Make edits to files as listed below: 
+2. Build instructions: 
+a. cd 
+b. ./install_scripts/build_quda.sh 2>&1 | tee op_quda.out
+c. ./install_scripts/build_milc1.sh 2>&1 | tee op_milc1.out
+d. Make edits to files as listed below: 
 In the file milc_qcd/ks_spectrum/compile_ks_spectrum_hisq_quda.sh(https://github.com/milc-qcd/milc_qcd/blob/develop/ks_spectrum/compile_ks_spectrum_hisq_quda.sh), uncomment lines 42-45 for NVIDIA Gpus.
-e ./install_scripts/build_milc2.sh 2>&1 | tee op_milc2.out
+e. ./install_scripts/build_milc2.sh 2>&1 | tee op_milc2.out
 
 This should build both QUDA and MILC. 
 
