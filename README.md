@@ -3,5 +3,5 @@ Building and implementing staggered Multigrid on different supercomputers.
 
 
 Instructions for : 
-Summit at OLCF: 
-Crusher at OLCF:
+[Summit](https://github.com/vmos1/Staggered_multigrid_build/blob/main/build_summit/README.md)
+[Crusher](https://github.com/vmos1/Staggered_multigrid_build/blob/main/build_summit/README.md)
