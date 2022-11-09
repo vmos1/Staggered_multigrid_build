@@ -15,15 +15,17 @@ In the file [milc_qcd/ks_spectrum/compile_ks_spectrum_hisq_quda.sh](https://gith
 This should build both QUDA and MILC. 
 
 # Instructions for running code
-1 cd <run_directory>
-2 Copy the input files from build_summit/sample_input_files to the required location
-3 mkdir rand
-4 ln -s /gpfs/alpine/proj-shared/lgt104/detar/lat
-5 cp build_summit/sample_build_scripts/* .
-6 Edit the input*.kpp and mgparams*.txt files for the required 
-7 Edit the run-mg-tune.lsf and run-mg-full.lsf files. Add the correct location of the build directory for PROJ in line 15
-8 Submit tuning run bsub run_tune_slurm.sh
-9 Submit full run bsub run_tune_slurm.sh
+
+| Command | Description | 
+| -- | -- |
+| cd <run_directory> | Enter run directory |
+| cp build_summit/sample_build_scripts/* .  | Copy the input files from build_summit/sample_input_files to the required location |
+| mkdir rand | Create directory for storing random numbers | 
+| ln -s /gpfs/alpine/proj-shared/lgt104/detar/lat | Create sym link for gauge configuration | 
+| Edit the input*.kpp and mgparams*.txt files | Edit for varying local volume, MG layers, etc. | 
+| Edit the run-mg-tune.lsf and run-mg-full.lsf files | Add the correct location of the build directory for PROJ in line 15 |
+| bsub run_tune_slurm.sh | Submit tuning run |
+| bsub run_tune_slurm.sh | Submit full run | 
 
 
 
