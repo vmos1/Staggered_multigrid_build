@@ -4,10 +4,10 @@ The procedure is described below.
 ## **Generate build scripts**: 
 You need a ```build_dir``` and ```run_dir```.
 - Using the jupyter notebook [build_summit/build_install_scripts_summit.ipynb](https://github.com/vmos1/Staggered_multigrid_build/blob/main/build_summit/build_install_scripts_summit.ipynb) :
-  - Edit the folder names in *dict_pars['build_dir']* and *dict_pars['run_dir']* to point to the appropriate locations for your run. 
-  - Run the entire jupyter notebook. It will copy all install scripts to the desired location. \
+  - Edit the folder names in `dict_pars['build_dir']` and `dict_pars['run_dir']` to point to the appropriate locations for your run. 
+  - Run the entire jupyter notebook. It will copy all install scripts to the desired location. 
 
- **OR Alternatively**  \
+ **OR Alternatively**  
 - Manually copy and edit scripts : 
     - Manually create empty directories inside ```build_dir``` as ``` mkdir QUDA/src install install_scripts```
     - Copy the contents of the folder *sample_install_scripts* to ```build_dir/install_scripts/```
