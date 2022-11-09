@@ -37,5 +37,3 @@ This should build both QUDA and MILC.
 | ```bsub run-mg-tune.lsf``` | Submit tuning run |
 | ```bsub run-mg-full.lsf``` | Submit full run after completion of tuning run | 
 
-
-A sample build document is provided here. 
