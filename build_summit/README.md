@@ -21,7 +21,7 @@ This should build both QUDA and MILC.
 | Command | Description | 
 | -- | -- |
 | ```cd <run_directory>``` | Enter run directory |
-| ```cp build_summit/sample_build_scripts/* .```  | Copy the input files from build_summit/sample_input_files to the required location |
+| ```cp build_summit/sample_input_files/* .```  | Copy the input files from build_summit/sample_input_files to the required location |
 | ```mkdir rand``` | Create directory for storing random numbers | 
 | ```ln -s /gpfs/alpine/proj-shared/lgt104/detar/lat``` | Create sym link for gauge configuration | 
 | Edit the input*.kpp and mgparams*.txt files | Edit for varying local volume, MG layers, etc. | 
