@@ -5,12 +5,12 @@ The procedure is described below.
 Edit the folder names in dict_pars['build_dir'] and dict_pars['run_dir'] to point to the appropriate locations for your run. Run the entire jupyter notebook. It will copy all install scripts to the desired location.
 Alternatively, copy the contents of the folder sample_install_scripts to the required location.
 * *Build instructions*: 
-  - cd 
-  - ./install_scripts/build_quda.sh 2>&1 | tee op_quda.out
-  - ./install_scripts/build_milc1.sh 2>&1 | tee op_milc1.out
+  - ```cd <build_dir>``` 
+  - ```./install_scripts/build_quda.sh 2>&1 | tee op_quda.out ```
+  - ```./install_scripts/build_milc1.sh 2>&1 | tee op_milc1.out ```
   - Make edits to files as listed below: 
 In the file [milc_qcd/ks_spectrum/compile_ks_spectrum_hisq_quda.sh](https://github.com/milc-qcd/milc_qcd/blob/develop/ks_spectrum/compile_ks_spectrum_hisq_quda.sh), uncomment lines 42-45 for NVIDIA Gpus.
-  - ./install_scripts/build_milc2.sh 2>&1 | tee op_milc2.out
+  - ```./install_scripts/build_milc2.sh 2>&1 | tee op_milc2.out ```
 
 This should build both QUDA and MILC. 
 
@@ -18,14 +18,14 @@ This should build both QUDA and MILC.
 
 | Command | Description | 
 | -- | -- |
-| `cd <run_directory>` | Enter run directory |
+| ```cd <run_directory>``` | Enter run directory |
 | ```cp build_summit/sample_build_scripts/* .```  | Copy the input files from build_summit/sample_input_files to the required location |
-| mkdir rand | Create directory for storing random numbers | 
-| ln -s /gpfs/alpine/proj-shared/lgt104/detar/lat | Create sym link for gauge configuration | 
+| ```mkdir rand``` | Create directory for storing random numbers | 
+| ```ln -s /gpfs/alpine/proj-shared/lgt104/detar/lat``` | Create sym link for gauge configuration | 
 | Edit the input*.kpp and mgparams*.txt files | Edit for varying local volume, MG layers, etc. | 
 | Edit the run-mg-tune.lsf and run-mg-full.lsf files | Add the correct location of the build directory for PROJ in line 15 |
-| bsub run_tune_slurm.sh | Submit tuning run |
-| bsub run_tune_slurm.sh | Submit full run | 
+| ```bsub run_tune_slurm.sh``` | Submit tuning run |
+| ```bsub run_tune_slurm.sh``` | Submit full run | 
 
 
 
