@@ -34,8 +34,8 @@ This should build both QUDA and MILC.
 | ```ln -s /gpfs/alpine/proj-shared/lgt104/detar/lat``` | Create sym link for gauge configuration | 
 | Edit the `input*.kpp` and `mgparams*.txt` files | Edit for varying local volume, MG layers, etc. | 
 | Edit the `run-mg-tune.lsf` and `run-mg-full.lsf` files | Add the correct location of the build directory for PROJ in line 15 |
-| ```bsub run_tune_slurm.sh``` | Submit tuning run |
-| ```bsub run_tune_slurm.sh``` | Submit full run | 
+| ```sbatch run_tune_slurm.sh``` | Submit tuning run |
+| ```sbatch run_tune_slurm.sh``` | Submit full run after completion of tuning run | 
 
 
 A sample build document is provided here. 
