@@ -1,0 +1,51 @@
+#!/bin/bash -v
+#BSUB -P lgt104
+#BSUB -W 2:00
+#BSUB -nnodes 144
+#BSUB -J fpi000569
+#BSUB -o kpp_spectrumOut.%J
+#BSUB -e kpp_spectrumErr.%J
+#BSUB -alloc_flags "smt4"
+#BSUB -cn_cu 'maxcus=8'
+#BSUB -q debug
+
+# submit with 
+# bsub run.lsf
+
+nodes=144
+PROJ=/gpfs/alpine/lgt104/proj-shared/ayyar/runs_summit/runs_march14_2022
+source /gpfs/alpine/lgt104/proj-shared/ayyar/builds_summit/install_March_14_2022/setup_env.sh
+
+executable=${PROJ}/ks_spectrum_hisq
+input=input-mg.kpp
+output=output-full-xfast-1536vec-run-1.kpp
+
+node_geom="6 3 6 8"
+io_geom="6 3 1 1"
+runargs="-qmp-geom ${node_geom} -qmp-alloc-map 0 1 2 3 -qmp-logic-map 0 1 2 3"
+
+export QUDA_RESOURCE_PATH=${PROJ}/tunecache # location of QUDA tunecache file
+mkdir -p $QUDA_RESOURCE_PATH
+export QUDA_ENABLE_GDR=1
+export QUDA_MILC_HISQ_RECONSTRUCT=13
+export QUDA_MILC_HISQ_RECONSTRUCT_SLOPPY=9
+
+export QUDA_ENABLE_DEVICE_MEMORY_POOL=0
+export QUDA_ENABLE_MANAGED_MEMORY=1
+export QUDA_ENABLE_MANAGED_PREFETCH=1
+
+echo "START_RUN: `date`" >> $output
+echo "EXECUTABLE =  $executable" >> $output
+ls -l $executable >> $output
+echo "RUNARGS = $runargs" >> $output
+
+export OMP_NUM_THREADS=7
+export APP="$executable $runargs $input $output"
+echo ${APP} >> ${output}
+cmd="jsrun --smpiargs="'"-gpu"'" -n $nodes -r 1 -g 6 -a 6 -c 42 -dpacked -b packed:7 -l gpu-cpu ./bind-6gpu.sh"
+
+echo COMMAND: $cmd >> $output
+$cmd
+
+echo "FINISH_RUN: `date`" >> $output
+
