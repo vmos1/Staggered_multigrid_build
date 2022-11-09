@@ -2,7 +2,7 @@
 We need to build QUDA and MILC in sequence.  QUDA can be built with a single script. Due to the need to edit some files in MILC after download, it is built in two steps.
 The procedure is described below.
 ## **Generate build scripts**: 
-You need a ```build_dir``` and ```run_dir```.
+You need 2 directories: ```build_dir``` and ```run_dir```.
 - Using the jupyter notebook [build_summit/build_install_scripts_summit.ipynb](https://github.com/vmos1/Staggered_multigrid_build/blob/main/build_summit/build_install_scripts_summit.ipynb) :
   - Edit the folder names in `dict_pars['build_dir']` and `dict_pars['run_dir']` to point to the appropriate locations.
   - Run the entire jupyter notebook. It will copy all install scripts to the desired location in `build_dir`.
