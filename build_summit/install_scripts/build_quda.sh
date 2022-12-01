@@ -1,16 +1,16 @@
 #!/bin/bash
 date
 #############
-WORKDIR=/gpfs/alpine/lgt104/proj-shared/ayyar/builds_summit/install_nov9_2022
+BUILD_DIR=/gpfs/alpine/lgt104/proj-shared/ayyar/builds_summit/install_Dec1_2022
 
 #############
 ## Source environment
-source ${WORKDIR}/install_scripts/setup_env_summit.sh
+source ${BUILD_DIR}/install_scripts/setup_env_summit.sh
 
 ############
 ## Build QUDA
-QUDA_SRC=${WORKDIR}/QUDA/src/quda
-QUDA_BUILD=${WORKDIR}/QUDA/build
+QUDA_SRC=${BUILD_DIR}/QUDA/src/quda
+QUDA_BUILD=${BUILD_DIR}/QUDA/build
 
 pushd .
 if [ ! -d $QUDA_SRC ]

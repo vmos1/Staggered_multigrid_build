@@ -16,4 +16,4 @@ module load gdrcopy/2.2
 module list
 
 
-export LD_LIBRARY_PATH="/gpfs/alpine/lgt104/proj-shared/ayyar/builds_summit/install_nov9_2022/QUDA/build/usqcd/lib:${LD_LIBRARY_PATH}"
+export LD_LIBRARY_PATH="/gpfs/alpine/lgt104/proj-shared/ayyar/builds_summit/install_Dec1_2022/QUDA/build/usqcd/lib:${LD_LIBRARY_PATH}"
