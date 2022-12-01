@@ -9,13 +9,18 @@ You need 2 directories: ```build_dir``` and ```run_dir```.
 
  **OR Alternatively**  
 - **Manually copy and edit scripts** : 
-    - Manually create empty directories inside ```build_dir``` as ``` mkdir QUDA/src install install_scripts```
-    - Copy the contents of the folder [*sample_build_scripts*](https://github.com/vmos1/Staggered_multigrid_build/tree/main/build_summit/sample_build_scripts) to ```<build_dir>/install_scripts/```
-    - Edit the contents of the files ```build_quda.sh```, ``` build_milc1.sh``` & ``` build_milc2.sh``` : 
-      - Modify ```script_loc=<build_directory>/install_scripts```
+
+| Command | Description | 
+| -- | -- |
+| `export BUILD_DIR=<build_dir>`| Setup paths |
+| `cd $BUILD_DIR` | Enter build directory |
+| ` mkdir QUDA/src install install_scripts` | Manually create empty directories inside `build_dir`  |
+| `cp -r <repo_dir>/build_summit/install_scripts $BUILD_DIR/` | Copy the folder [*build_summit/install_scripts*](https://github.com/vmos1/Staggered_multigrid_build/tree/main/build_summit/install_scripts) to `<build_dir>/` |
+
 
 ## **Build instructions**: 
   - ```cd <build_dir>``` 
+  - `export BUILD_DIR=$PWD`
   - ```./install_scripts/build_quda.sh 2>&1 | tee op_quda.out ```
   - ```./install_scripts/build_milc1.sh 2>&1 | tee op_milc1.out ```
   - Make edits to files as listed below: 
@@ -33,7 +38,7 @@ This should build both QUDA and MILC.
 | ```mkdir rand``` | Create directory for storing random numbers | 
 | ```ln -s /gpfs/alpine/proj-shared/lgt104/detar/lat``` | Create sym link for gauge configuration | 
 | Edit the `input*.kpp` and `mgparams*.txt` files | Edit for varying local volume, MG layers, etc. | 
-| Edit the `run-mg-tune.lsf` and `run-mg-full.lsf` files | Add the correct location of the build directory for PROJ in line 15 |
+| `export BUILD_DIR=<build_dir>`| Setup build path |
 | ```bsub run-mg-tune.lsf``` | Submit tuning run |
 | ```bsub run-mg-full.lsf``` | Submit full run after completion of tuning run | 
 
