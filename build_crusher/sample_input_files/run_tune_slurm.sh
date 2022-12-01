@@ -12,7 +12,6 @@ nodes=8
 source ${BUILD_DIR}/install_scripts/setup_env_crusher.sh
 
 executable=${BUILD_DIR}/milc_qcd/ks_spectrum/ks_spectrum_hisq
-
 input=input-tune.kpp
 output=output-tune.kpp
 

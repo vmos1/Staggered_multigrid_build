@@ -12,10 +12,9 @@
 # bsub run.lsf
 
 nodes=8
-PROJ=/gpfs/alpine/lgt104/proj-shared/ayyar/runs_summit/runs_march14_2022
-source /gpfs/alpine/lgt104/proj-shared/ayyar/builds_summit/install_March_14_2022/setup_env.sh
+source ${BUILD_DIR}/setup_env.sh
 
-executable=${PROJ}/ks_spectrum_hisq
+executable=${BUILD_DIR}/milc_qcd/ks_spectrum/ks_spectrum_hisq
 input=input-mg-tune.kpp
 output=output-tune-xfast-0.kpp
 
@@ -23,7 +22,7 @@ node_geom="6 2 2 2"
 io_geom="${node_geom}"
 runargs="-qmp-geom ${node_geom} -qmp-alloc-map 0 1 2 3 -qmp-logic-map 0 1 2 3"
 
-export QUDA_RESOURCE_PATH=${PROJ}/tunecache # location of QUDA tunecache file
+export QUDA_RESOURCE_PATH=$PWD/tunecache # location of QUDA tunecache file
 mkdir -p $QUDA_RESOURCE_PATH
 export QUDA_ENABLE_GDR=1
 export QUDA_MILC_HISQ_RECONSTRUCT=13
