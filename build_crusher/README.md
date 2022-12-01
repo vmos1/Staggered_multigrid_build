@@ -12,6 +12,11 @@ You need 2 directories: ```build_dir``` and ```run_dir```.
     - Manually create empty directories inside ```build_dir``` as ``` mkdir QUDA/src install install_scripts```
     - Copy the contents of the folder [*install_scripts*](https://github.com/vmos1/Staggered_multigrid_build/tree/main/build_crusher/install_scripts) to ```<build_dir>/install_scripts/```
 
+| Command | Description | 
+| -- | -- |
+| `cd <build_dir>` | Enter build directory |
+| ` mkdir QUDA/src install install_scripts` | Manually create empty directories inside `build_dir`  |
+| `cp -r <repo_dir>/build_crusher/install_scripts <build_dir>/` | Copy the folder [*build_crusher/install_scripts*](https://github.com/vmos1/Staggered_multigrid_build/tree/main/build_crusher/install_scripts) to `<build_dir>/` |
 
 ## **Build instructions**: 
   - ```cd <build_dir>``` 
