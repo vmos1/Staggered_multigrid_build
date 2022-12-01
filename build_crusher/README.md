@@ -9,6 +9,7 @@ You need 2 directories: ```build_dir``` and ```run_dir```.
 
  **OR Alternatively**  
 - **Manually copy and edit scripts** : 
+
 | Command | Description | 
 | -- | -- |
 | `export BUILD_DIR=<build_dir>`| Setup paths |
