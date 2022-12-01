@@ -9,9 +9,6 @@ You need 2 directories: ```build_dir``` and ```run_dir```.
 
  **OR Alternatively**  
 - **Manually copy and edit scripts** : 
-    - Manually create empty directories inside ```build_dir``` as ``` mkdir QUDA/src install install_scripts```
-    - Copy the contents of the folder [*install_scripts*](https://github.com/vmos1/Staggered_multigrid_build/tree/main/build_crusher/install_scripts) to ```<build_dir>/install_scripts/```
-
 | Command | Description | 
 | -- | -- |
 | `export BUILD_DIR=<build_dir>`| Setup paths |
