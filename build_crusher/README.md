@@ -28,11 +28,12 @@ You need 2 directories: ```build_dir``` and ```run_dir```.
 
 This should build both QUDA and MILC. 
 
-## Instructions for running code on Crusher
+## Instructions for running Staggered Multigrid on Crusher
 
 | Command | Description | 
 | -- | -- |
 | ```cd <run_dir>``` | Enter run directory |
+| `export BUILD_DIR=<build_dir>`| Setup build path |
 | ```cp <repo_dir>/build_crusher/sample_input_files/* .```  | Copy the input files from [build_crusher/sample_input_files](https://github.com/vmos1/Staggered_multigrid_build/tree/main/build_crusher/sample_input_files) to the required location |
 | ```mkdir rand``` | Create directory for storing random numbers | 
 | ```ln -s /gpfs/alpine/proj-shared/lgt104/detar/lat``` | Create sym link for gauge configuration | 
