@@ -1,10 +1,11 @@
 #!/bin/bash
+date
 #############
 ## Source environment
 
-script_loc=/gpfs/alpine/lgt104/proj-shared/ayyar/builds_crusher/install_oct17_2022/install_scripts
+script_loc=$BUILD_DIR/install_scripts
 source $script_loc/setup_env_crusher.sh
-WORKDIR=$TOPDIR_HIP
+WORKDIR=$BUILD_DIR
 
 ############
 ## Build QUDA
@@ -15,8 +16,9 @@ pushd .
 if [ ! -d $QUDA_SRC ]
 then
 ##  git clone --branch feature/hip-compile-fixes https://github.com/lattice/quda $QUDA_SRC # clone QUDA to the desired directory
-    git clone --branch develop https://github.com/lattice/quda $QUDA_SRC # clone QUDA to the desired directory
-##    git clone --branch hotfix/gauge_path_test https://github.com/lattice/quda $QUDA_SRC # clone QUDA to the desired directory
+
+git clone --branch develop https://github.com/lattice/quda $QUDA_SRC # clone QUDA to the desired directory
+
 else
   cd $QUDA_SRC; git pull; cd ..
 fi
@@ -37,3 +39,5 @@ cmake -DCMAKE_BUILD_TYPE=DEVEL -DQUDA_DIRAC_DEFAULT_OFF=ON -DQUDA_DIRAC_STAGGERE
 nice make VERBOSE=1 -j 16 
 make install
 popd
+
+date

@@ -9,10 +9,10 @@
 #SBATCH --ntasks-per-node=8
 
 nodes=108
-PROJ=/gpfs/alpine/lgt104/proj-shared/ayyar/builds_crusher/install_oct17_2022
-source ${PROJ}/install_scripts/setup_env_crusher.sh
+BUILD_DIR=/gpfs/alpine/lgt104/proj-shared/ayyar/builds_crusher/install_oct17_2022
+source ${BUILD_DIR}/install_scripts/setup_env_crusher.sh
 
-executable=${PROJ}/milc_qcd/ks_spectrum/ks_spectrum_hisq
+executable=${BUILD_DIR}/milc_qcd/ks_spectrum/ks_spectrum_hisq
 input=input-full.kpp
 output=output-full.kpp
 
