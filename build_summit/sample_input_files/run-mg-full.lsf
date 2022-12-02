@@ -13,7 +13,7 @@
 # bsub run.lsf
 
 nodes=144
-source ${BUILD_DIR}/setup_env.sh
+source ${BUILD_DIR}/setup_env_summit.sh
 
 executable=${BUILD_DIR}/milc_qcd/ks_spectrum/ks_spectrum_hisq
 input=input-mg.kpp
