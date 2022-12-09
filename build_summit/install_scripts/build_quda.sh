@@ -1,7 +1,5 @@
 #!/bin/bash
 date
-#############
-BUILD_DIR=/gpfs/alpine/lgt104/proj-shared/ayyar/builds_summit/install_Dec1_2022
 
 #############
 ## Source environment
