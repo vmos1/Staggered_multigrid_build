@@ -1,9 +1,16 @@
 #!/bin/bash
-date
 #############
 ## Source environment
 script_loc=$BUILD_DIR/install_scripts
-source $script_loc/setup_env_crusher.sh
+source $script_loc/setup_env.sh
+
+##git clone --branch feature/staggMG https://github.com/weinbe2/milc_qcd ${BUILD_DIR}/milc_qcd
+git clone --branch develop https://github.com/milc-qcd/milc_qcd ${BUILD_DIR}/milc_qcd
+
+
+### Uncomment specific lines from the file milc_qcd/ks_spectrum/compile_ks_spectrum_hisq_quda.sh 
+## for AMD GPUs : uncomment line 45
+sed -i "45 s/#//" milc_qcd/ks_spectrum/compile_ks_spectrum_hisq_quda.sh;
 
 QUDA_INSTALL=${INSTALLROOT}/quda
 
