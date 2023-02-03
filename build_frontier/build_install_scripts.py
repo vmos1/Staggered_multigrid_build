@@ -1,23 +1,25 @@
 # Script to generate scripts for buildig QUDA and MILC for Staggered Multigrid on Summit, Crusher and Frontier supercomputers
 ## Example run: python build_install_scripts.py --machine frontier -bdir temp/temp2
-
+'''Code does the following: 
+Creates parent directory
+3 directories install, install_scripts, QUDA/src
+creates 3 files setup_env.sh, build_quda.sh, build_milc.sh and copies them to install_scripts
+'''
 
 import os
 import subprocess as sp
 import argparse
-
+import shutil
 
 def f_parse_args():
     """Parse command line arguments.Only for .py file"""
-    parser = argparse.ArgumentParser(description="Script to generate scripts for buildig QUDA and MILC for Staggered Multigrid on Summit, Crusher and Frontier supercomputers", formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+    parser = argparse.ArgumentParser(description="Script to generate scripts for buildig QUDA and MILC for Staggered Multigrid on Crusher and Frontier supercomputers", formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     add_arg = parser.add_argument
     
-    add_arg('--machine','-m', type=str, choices=['summit','crusher','frontier'], default='crusher', help='Machine used')
+    add_arg('--machine','-m', type=str, choices=['crusher','frontier'], default='crusher', help='Machine used')
     add_arg('--build_dir','-bdir', type=str, default='', help='build directory')
     
     return parser.parse_args()
-
-
 
 
 def f_build_env_script(dict_pars,fname):
@@ -27,12 +29,12 @@ def f_build_env_script(dict_pars,fname):
 #############
 
 module load craype-accel-amd-gfx90a
-module load cray-mpich/8.1.14
+module load cray-mpich/{cray_mpich}
 module load cmake
-module load rocm/4.5.2
+module load rocm/{rocm}
 module list
 
-export MPICH_ROOT=/opt/cray/pe/mpich/8.1.14
+export MPICH_ROOT=/opt/cray/pe/mpich/{cray_mpich}
 export MPICH_DIR=${{MPICH_ROOT}}/ofi/crayclang/10.0
 
 ## These must be set before running
@@ -119,7 +121,7 @@ date
 
 def f_build_milc_script(dict_pars,fname):
 
-    milc_strg1='''#!/bin/bash
+    milc_strg='''#!/bin/bash
 #############
 ## Source environment
 script_loc=$BUILD_DIR/install_scripts
@@ -130,20 +132,10 @@ git clone --branch develop https://github.com/milc-qcd/milc_qcd ${{BUILD_DIR}}/m
 
 
 ### Uncomment specific lines from the file milc_qcd/ks_spectrum/compile_ks_spectrum_hisq_quda.sh 
-## for all GPUs line 45
+## for AMD GPUs : uncomment line 45
 sed -i "45 s/#//" milc_qcd/ks_spectrum/compile_ks_spectrum_hisq_quda.sh;
 
-'''.format(**dict_pars)
-    
-    
-    ## Exception for NVIDIA GPUs
-    if dict_pars['machine']=='summit':
-        milc_strg1+='## for NVIDIA GPUs also uncomment lines 42-44'
-        milc_strg1+='\nsed -i "42 s/#//" milc_qcd/ks_spectrum/compile_ks_spectrum_hisq_quda.sh;'
-        milc_strg1+='\nsed -i "43 s/#//" milc_qcd/ks_spectrum/compile_ks_spectrum_hisq_quda.sh;'
-        milc_strg1+='\nsed -i "44 s/#//" milc_qcd/ks_spectrum/compile_ks_spectrum_hisq_quda.sh;\n\n'
-    
-    milc_strg2='''QUDA_INSTALL=${{INSTALLROOT}}/quda
+QUDA_INSTALL=${{INSTALLROOT}}/quda
 
 LIBQUDA="-Wl,-rpath ${{QUDA_INSTALL}}/lib -L${{QUDA_INSTALL}}/lib -lquda -D__gfx90a --offload-arch=gfx90a --amdgpu-target=gfx90a -Wl,-rpath=${{ROCM_PATH}}/hiprand/lib -L${{ROCM_PATH}}/hiprand/lib -Wl,-rpath=${{ROCM_PATH}}/rocfft/lib -L${{ROCM_PATH}}/rocfft/lib -lhiprand -lrocfft -Wl,-rpath=${{ROCM_PATH}}/hipblas/lib -L${{ROCM_PATH}}/hipblas/lib -lhipblas -Wl,-rpath=${{ROCM_PATH}}/rocblas/lib -L${{ROCM_PATH}}/rocblas/lib -lrocblas -Wl,-rpath=${{ROCM_PATH}}/hip/lib"
 
@@ -183,9 +175,7 @@ cd ..
 
 date
 '''.format(**dict_pars)
-    
-    milc_strg=milc_strg1+milc_strg2
-    
+        
     with open(fname,'w') as f: f.write(milc_strg)
     
     
@@ -193,7 +183,7 @@ date
 if __name__=="__main__":
     args=f_parse_args()
          
-    if args.build_dir=='':     args.build_dir=os.getcwd()
+    if args.build_dir=='':     args.build_dir=os.getcwd()+'/new_runs_1'
     print("Build scripts for ",args.machine)
     print("Build directory: ",args.build_dir)
     
@@ -201,6 +191,9 @@ if __name__=="__main__":
     dict_pars['build_dir']= args.build_dir
     dict_pars['machine']  = args.machine
     
+    ## Define cray-mpich and rocm versions to use in setupfile
+    dict_pars['cray_mpich']='8.1.14'
+    dict_pars['rocm']      ='4.5.2'
     # Create empty directories
     
     ## Create upper level directories
@@ -226,16 +219,12 @@ if __name__=="__main__":
     for fname in [fname1,fname2,fname3]: 
         
         # make executables
-        
         cmd='chmod +x {0}'.format(fname)
         op=sp.check_output(cmd,shell=True)
         # print(op)
         
         # move files to location
-
         # print(fname,dict_pars['build_dir']+'/install_scripts/'+fname)
-        os.rename(fname,dict_pars['build_dir']+'/install_scripts/'+fname)
-    
-    # Move files
-    
+        shutil.move(fname,dict_pars['build_dir']+'/install_scripts/'+fname)
+        
     

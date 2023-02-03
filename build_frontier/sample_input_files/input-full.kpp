@@ -1,0 +1,11927 @@
+prompt 0
+nx 144
+ny 144
+nz 144
+nt 288
+node_geometry 6 3 6 8
+ionode_geometry 6 3 1 1
+iseed 5148
+job_id kpp144
+
+######################################################################
+# source time 35
+######################################################################
+
+# Gauge field description
+
+#fresh
+reload_parallel lat/v5/l144288f211b700m000569m01555m1827a.1146
+u0 0.892186
+no_gauge_fix
+forget
+staple_weight 0
+ape_iter 0
+coordinate_origin 0 0 0 0
+time_bc antiperiodic
+
+# Eigenpairs
+max_number_of_eigenpairs 0
+
+# Chiral condensate and related measurements
+
+number_of_pbp_masses 0
+
+# Description of base sources
+
+number_of_base_sources 2
+
+# base source 0
+
+random_color_wall
+field_type KS
+subset full
+t0 35
+ncolor 3
+momentum 0 0 0
+source_label r
+save_parallel_scidac_ks_source rand/src144288f211b700m000569m01555m1827a.1146.t35.r00
+
+# base source 1
+
+evenandodd_wall
+field_type KS
+subset full
+t0 35
+source_label q
+forget_source
+
+# Description of completed sources
+
+number_of_modified_sources 0
+
+
+# Description of propagators
+
+number_of_sets 24
+
+# Parameters for set 0
+
+set_type multimass
+inv_type MG
+MGparams mgparams-full.txt
+max_cg_iterations 5000
+max_cg_restarts 5
+check yes
+momentum_twist 0 0 0
+precision 2
+
+source 0
+
+number_of_propagators 3
+
+# propagator 0
+
+mass 0.000569
+naik_term_epsilon 0
+error_for_propagator 1e-6
+rel_error_for_propagator 0
+rebuild_type THIN
+
+fresh_ksprop
+forget_ksprop
+
+# propagator 1
+
+mass 0.0010
+naik_term_epsilon 0
+error_for_propagator 1e-6
+rel_error_for_propagator 0
+rebuild_type THIN
+
+fresh_ksprop
+forget_ksprop
+
+# propagator 2
+
+mass 0.001555
+naik_term_epsilon 0
+error_for_propagator 1e-6
+rel_error_for_propagator 0
+rebuild_type THIN
+
+fresh_ksprop
+forget_ksprop
+
+# propagators for set 3
+
+set_type multimass
+inv_type CG
+max_cg_iterations 5000
+max_cg_restarts 5
+check yes
+momentum_twist 0 0 0
+precision 2
+
+source 0
+
+number_of_propagators 7
+
+# propagator 3
+
+mass 0.00225
+naik_term_epsilon 0
+error_for_propagator 5e-7
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+
+# propagator 4
+
+mass 0.00311
+naik_term_epsilon 0
+error_for_propagator 1e-7
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+
+# propagator 5
+
+mass 0.004665
+naik_term_epsilon 0
+error_for_propagator 1e-7
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+
+# propagator 6
+
+mass 0.00622
+naik_term_epsilon 0
+error_for_propagator 1e-7
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+
+# propagator 7
+
+mass 0.00933
+naik_term_epsilon 0
+error_for_propagator 1e-7
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+
+# propagator 8
+
+mass 0.01244
+naik_term_epsilon 0
+error_for_propagator 1e-8
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+
+# propagator 9
+
+mass 0.01555
+naik_term_epsilon 0
+error_for_propagator 1e-8
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+# Parameters for set 1
+
+set_type multimass
+inv_type CG
+max_cg_iterations 100
+max_cg_restarts 5
+check yes
+momentum_twist 0 0 0
+precision 2
+
+source 0
+
+number_of_propagators 1
+
+# propagator 10
+
+mass 0.164
+naik_term_epsilon -0.017945
+error_for_propagator 5e-17
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+# Parameters for set 2
+
+set_type multimass
+inv_type CG
+max_cg_iterations 100
+max_cg_restarts 5
+check yes
+momentum_twist 0 0 0
+precision 2
+
+source 0
+
+number_of_propagators 1
+
+# propagator 11
+
+mass 0.1827
+naik_term_epsilon -0.022208
+error_for_propagator 5e-17
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+# Parameters for set 3
+
+set_type multimass
+inv_type CG
+max_cg_iterations 100
+max_cg_restarts 5
+check yes
+momentum_twist 0 0 0
+precision 2
+
+source 0
+
+number_of_propagators 1
+
+# propagator 12
+
+mass 0.275
+naik_term_epsilon -0.049403
+error_for_propagator 5e-17
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+# Parameters for set 4
+
+set_type multimass
+inv_type CG
+max_cg_iterations 100
+max_cg_restarts 5
+check yes
+momentum_twist 0 0 0
+precision 2
+
+source 0
+
+number_of_propagators 1
+
+# propagator 13
+
+mass 0.365
+naik_term_epsilon -0.084880
+error_for_propagator 1e-17
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+# Parameters for set 5
+
+set_type multimass
+inv_type CG
+max_cg_iterations 100
+max_cg_restarts 5
+check yes
+momentum_twist 0 0 0
+precision 2
+
+source 0
+
+number_of_propagators 1
+
+# propagator 14
+
+mass 0.457
+naik_term_epsilon -0.128803
+error_for_propagator 1e-17
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+# Parameters for set 6
+
+set_type multimass
+inv_type CG
+max_cg_iterations 100
+max_cg_restarts 5
+check yes
+momentum_twist 0 0 0
+precision 2
+
+source 0
+
+number_of_propagators 1
+
+# propagator 15
+
+mass 0.548
+naik_term_epsilon -0.178100
+error_for_propagator 1e-17
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+# Parameters for set 7
+
+set_type multimass
+inv_type CG
+max_cg_iterations 100
+max_cg_restarts 5
+check yes
+momentum_twist 0 0 0
+precision 2
+
+source 0
+
+number_of_propagators 1
+
+# propagator 16
+
+mass 0.639
+naik_term_epsilon -0.231411
+error_for_propagator 1e-18
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+# Parameters for set 8
+
+set_type multimass
+inv_type CG
+max_cg_iterations 100
+max_cg_restarts 5
+check yes
+momentum_twist 0 0 0
+precision 2
+
+source 0
+
+number_of_propagators 1
+
+# propagator 17
+
+mass 0.731
+naik_term_epsilon -0.287709
+error_for_propagator 1e-18
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+# Parameters for set 9
+
+set_type multimass
+inv_type CG
+max_cg_iterations 100
+max_cg_restarts 5
+check yes
+momentum_twist 0 0 0
+precision 2
+
+source 0
+
+number_of_propagators 1
+
+# propagator 18
+
+mass 0.822
+naik_term_epsilon -0.344598
+error_for_propagator 1e-18
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+# Parameters for set 10
+
+set_type multimass
+inv_type CG
+max_cg_iterations 100
+max_cg_restarts 5
+check yes
+momentum_twist 0 0 0
+precision 2
+
+source 0
+
+number_of_propagators 1
+
+# propagator 19
+
+mass 0.913
+naik_term_epsilon -0.402446
+error_for_propagator 1e-18
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+
+# Parameters for set 2 v2
+
+set_type multimass
+inv_type MG
+MGparams mgparams.txt
+max_cg_iterations 5000
+max_cg_restarts 5
+check yes
+momentum_twist 0 0 0
+precision 2
+
+source 1
+
+number_of_propagators 3
+
+# propagator 20
+
+mass 0.000569
+naik_term_epsilon 0
+error_for_propagator 1e-6
+rel_error_for_propagator 0
+rebuild_type THIN
+
+fresh_ksprop
+forget_ksprop
+
+# propagator 21
+
+mass 0.0010
+naik_term_epsilon 0
+error_for_propagator 1e-6
+rel_error_for_propagator 0
+rebuild_type THIN
+
+fresh_ksprop
+forget_ksprop
+
+# propagator 22
+
+mass 0.001555
+naik_term_epsilon 0
+error_for_propagator 1e-6
+rel_error_for_propagator 0
+rebuild_type THIN
+
+fresh_ksprop
+forget_ksprop
+
+set_type multimass
+inv_type CG
+max_cg_iterations 5000
+max_cg_restarts 5
+check yes
+momentum_twist 0 0 0
+precision 2
+
+source 1
+
+number_of_propagators 7
+
+# propagator 23
+
+mass 0.00225
+naik_term_epsilon 0
+error_for_propagator 5e-7
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+
+# propagator 24
+
+mass 0.00311
+naik_term_epsilon 0
+error_for_propagator 1e-7
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+
+# propagator 25
+
+mass 0.004665
+naik_term_epsilon 0
+error_for_propagator 1e-7
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+
+# propagator 26
+
+mass 0.00622
+naik_term_epsilon 0
+error_for_propagator 1e-7
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+
+# propagator 27
+
+mass 0.00933
+naik_term_epsilon 0
+error_for_propagator 1e-7
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+
+# propagator 28
+
+mass 0.01244
+naik_term_epsilon 0
+error_for_propagator 1e-8
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+
+# propagator 29
+
+mass 0.01555
+naik_term_epsilon 0
+error_for_propagator 1e-8
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+# Parameters for set 12
+
+set_type multimass
+inv_type CG
+max_cg_iterations 100
+max_cg_restarts 5
+check yes
+momentum_twist 0 0 0
+precision 2
+
+source 1
+
+number_of_propagators 1
+
+# propagator 30
+
+mass 0.164
+naik_term_epsilon -0.017945
+error_for_propagator 5e-17
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+# Parameters for set 13
+
+set_type multimass
+inv_type CG
+max_cg_iterations 100
+max_cg_restarts 5
+check yes
+momentum_twist 0 0 0
+precision 2
+
+source 1
+
+number_of_propagators 1
+
+# propagator 31
+
+mass 0.1827
+naik_term_epsilon -0.022208
+error_for_propagator 5e-17
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+# Parameters for set 14
+
+set_type multimass
+inv_type CG
+max_cg_iterations 100
+max_cg_restarts 5
+check yes
+momentum_twist 0 0 0
+precision 2
+
+source 1
+
+number_of_propagators 1
+
+# propagator 32
+
+mass 0.275
+naik_term_epsilon -0.049403
+error_for_propagator 5e-17
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+# Parameters for set 15
+
+set_type multimass
+inv_type CG
+max_cg_iterations 100
+max_cg_restarts 5
+check yes
+momentum_twist 0 0 0
+precision 2
+
+source 1
+
+number_of_propagators 1
+
+# propagator 33
+
+mass 0.365
+naik_term_epsilon -0.084880
+error_for_propagator 1e-17
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+# Parameters for set 16
+
+set_type multimass
+inv_type CG
+max_cg_iterations 100
+max_cg_restarts 5
+check yes
+momentum_twist 0 0 0
+precision 2
+
+source 1
+
+number_of_propagators 1
+
+# propagator 34
+
+mass 0.457
+naik_term_epsilon -0.128803
+error_for_propagator 1e-17
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+# Parameters for set 17
+
+set_type multimass
+inv_type CG
+max_cg_iterations 100
+max_cg_restarts 5
+check yes
+momentum_twist 0 0 0
+precision 2
+
+source 1
+
+number_of_propagators 1
+
+# propagator 35
+
+mass 0.548
+naik_term_epsilon -0.178100
+error_for_propagator 1e-17
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+# Parameters for set 18
+
+set_type multimass
+inv_type CG
+max_cg_iterations 100
+max_cg_restarts 5
+check yes
+momentum_twist 0 0 0
+precision 2
+
+source 1
+
+number_of_propagators 1
+
+# propagator 36
+
+mass 0.639
+naik_term_epsilon -0.231411
+error_for_propagator 1e-18
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+# Parameters for set 19
+
+set_type multimass
+inv_type CG
+max_cg_iterations 100
+max_cg_restarts 5
+check yes
+momentum_twist 0 0 0
+precision 2
+
+source 1
+
+number_of_propagators 1
+
+# propagator 37
+
+mass 0.731
+naik_term_epsilon -0.287709
+error_for_propagator 1e-18
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+# Parameters for set 20
+
+set_type multimass
+inv_type CG
+max_cg_iterations 100
+max_cg_restarts 5
+check yes
+momentum_twist 0 0 0
+precision 2
+
+source 1
+
+number_of_propagators 1
+
+# propagator 38
+
+mass 0.822
+naik_term_epsilon -0.344598
+error_for_propagator 1e-18
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+# Parameters for set 21
+
+set_type multimass
+inv_type CG
+max_cg_iterations 100
+max_cg_restarts 5
+check yes
+momentum_twist 0 0 0
+precision 2
+
+source 1
+
+number_of_propagators 1
+
+# propagator 39
+
+mass 0.913
+naik_term_epsilon -0.402446
+error_for_propagator 1e-18
+rel_error_for_propagator 0
+
+fresh_ksprop
+forget_ksprop
+
+
+number_of_quarks 80
+
+
+# mass 0 PP
+
+propagator 0
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 1 PP
+
+propagator 1
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 2 PP
+
+propagator 2
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 3 PP
+
+propagator 3
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 4 PP
+
+propagator 4
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 5 PP
+
+propagator 5
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 6 PP
+
+propagator 6
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 7 PP
+
+propagator 7
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 8 PP
+
+propagator 8
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 9 PP
+
+propagator 9
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 10 PP
+
+propagator 10
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 11 PP
+
+propagator 11
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 12 PP
+
+propagator 12
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 13 PP
+
+propagator 13
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 14 PP
+
+propagator 14
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 15 PP
+
+propagator 15
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 16 PP
+
+propagator 16
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 17 PP
+
+propagator 17
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 18 PP
+
+propagator 18
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 19 PP
+
+propagator 19
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 0 WP
+
+propagator 20
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 1 WP
+
+propagator 21
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 2 WP
+
+propagator 22
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 3 WP
+
+propagator 23
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 4 WP
+
+propagator 24
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 5 WP
+
+propagator 25
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 6 WP
+
+propagator 26
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 7 WP
+
+propagator 27
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 8 WP
+
+propagator 28
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 9 WP
+
+propagator 29
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 10 WP
+
+propagator 30
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 11 WP
+
+propagator 31
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 12 WP
+
+propagator 32
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 13 WP
+
+propagator 33
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 14 WP
+
+propagator 34
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 15 WP
+
+propagator 35
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 16 WP
+
+propagator 36
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 17 WP
+
+propagator 37
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 18 WP
+
+propagator 38
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 19 WP
+
+propagator 39
+
+identity
+op_label d
+forget_ksprop
+
+
+# mass 0 PW
+
+propagator 0
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 1 PW
+
+propagator 1
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 2 PW
+
+propagator 2
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 3 PW
+
+propagator 3
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 4 PW
+
+propagator 4
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 5 PW
+
+propagator 5
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 6 PW
+
+propagator 6
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 7 PW
+
+propagator 7
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 8 PW
+
+propagator 8
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 9 PW
+
+propagator 9
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 10 PW
+
+propagator 10
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 11 PW
+
+propagator 11
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 12 PW
+
+propagator 12
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 13 PW
+
+propagator 13
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 14 PW
+
+propagator 14
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 15 PW
+
+propagator 15
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 16 PW
+
+propagator 16
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 17 PW
+
+propagator 17
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 18 PW
+
+propagator 18
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 19 PW
+
+propagator 19
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 0 WW
+
+propagator 20
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 1 WW
+
+propagator 21
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 2 WW
+
+propagator 22
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 3 WW
+
+propagator 23
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 4 WW
+
+propagator 24
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 5 WW
+
+propagator 25
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 6 WW
+
+propagator 26
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 7 WW
+
+propagator 27
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 8 WW
+
+propagator 28
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 9 WW
+
+propagator 29
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 10 WW
+
+propagator 30
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 11 WW
+
+propagator 31
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 12 WW
+
+propagator 32
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 13 WW
+
+propagator 33
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 14 WW
+
+propagator 34
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 15 WW
+
+propagator 35
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 16 WW
+
+propagator 36
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 17 WW
+
+propagator 37
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 18 WW
+
+propagator 38
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+
+# mass 19 WW
+
+propagator 39
+
+evenandodd_wall
+op_label EO
+forget_ksprop
+
+# Description of mesons
+
+number_of_mesons 728
+
+
+# pair 0 (masses 0 0 PP)
+
+pair 0 0
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 1 (masses 0 0 PW)
+
+pair 40 40
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 2 (masses 0 0 WP)
+
+pair 20 20
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 3 (masses 0 0 WW)
+
+pair 60 60
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 4 (masses 0 1 PP)
+
+pair 0 1
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 5 (masses 0 1 PW)
+
+pair 40 41
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 6 (masses 0 1 WP)
+
+pair 20 21
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 7 (masses 0 1 WW)
+
+pair 60 61
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 8 (masses 0 2 PP)
+
+pair 0 2
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 9 (masses 0 2 PW)
+
+pair 40 42
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 10 (masses 0 2 WP)
+
+pair 20 22
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 11 (masses 0 2 WW)
+
+pair 60 62
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 12 (masses 0 3 PP)
+
+pair 0 3
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 13 (masses 0 3 PW)
+
+pair 40 43
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 14 (masses 0 3 WP)
+
+pair 20 23
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 15 (masses 0 3 WW)
+
+pair 60 63
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 16 (masses 0 4 PP)
+
+pair 0 4
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 17 (masses 0 4 PW)
+
+pair 40 44
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 18 (masses 0 4 WP)
+
+pair 20 24
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 19 (masses 0 4 WW)
+
+pair 60 64
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 20 (masses 0 5 PP)
+
+pair 0 5
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 21 (masses 0 5 PW)
+
+pair 40 45
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 22 (masses 0 5 WP)
+
+pair 20 25
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 23 (masses 0 5 WW)
+
+pair 60 65
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 24 (masses 0 6 PP)
+
+pair 0 6
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 25 (masses 0 6 PW)
+
+pair 40 46
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 26 (masses 0 6 WP)
+
+pair 20 26
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 27 (masses 0 6 WW)
+
+pair 60 66
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 28 (masses 0 7 PP)
+
+pair 0 7
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 29 (masses 0 7 PW)
+
+pair 40 47
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 30 (masses 0 7 WP)
+
+pair 20 27
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 31 (masses 0 7 WW)
+
+pair 60 67
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 32 (masses 0 8 PP)
+
+pair 0 8
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 33 (masses 0 8 PW)
+
+pair 40 48
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 34 (masses 0 8 WP)
+
+pair 20 28
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 35 (masses 0 8 WW)
+
+pair 60 68
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 36 (masses 0 9 PP)
+
+pair 0 9
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 37 (masses 0 9 PW)
+
+pair 40 49
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 38 (masses 0 9 WP)
+
+pair 20 29
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 39 (masses 0 9 WW)
+
+pair 60 69
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 40 (masses 0 10 PP)
+
+pair 0 10
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 41 (masses 0 10 PW)
+
+pair 40 50
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 42 (masses 0 10 WP)
+
+pair 20 30
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 43 (masses 0 10 WW)
+
+pair 60 70
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 44 (masses 0 11 PP)
+
+pair 0 11
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 45 (masses 0 11 PW)
+
+pair 40 51
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 46 (masses 0 11 WP)
+
+pair 20 31
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 47 (masses 0 11 WW)
+
+pair 60 71
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 48 (masses 0 12 PP)
+
+pair 0 12
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 49 (masses 0 12 PW)
+
+pair 40 52
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 50 (masses 0 12 WP)
+
+pair 20 32
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 51 (masses 0 12 WW)
+
+pair 60 72
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 52 (masses 0 13 PP)
+
+pair 0 13
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 53 (masses 0 13 PW)
+
+pair 40 53
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 54 (masses 0 13 WP)
+
+pair 20 33
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 55 (masses 0 13 WW)
+
+pair 60 73
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 56 (masses 0 14 PP)
+
+pair 0 14
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 57 (masses 0 14 PW)
+
+pair 40 54
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 58 (masses 0 14 WP)
+
+pair 20 34
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 59 (masses 0 14 WW)
+
+pair 60 74
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 60 (masses 0 15 PP)
+
+pair 0 15
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 61 (masses 0 15 PW)
+
+pair 40 55
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 62 (masses 0 15 WP)
+
+pair 20 35
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 63 (masses 0 15 WW)
+
+pair 60 75
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 64 (masses 0 16 PP)
+
+pair 0 16
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 65 (masses 0 16 PW)
+
+pair 40 56
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 66 (masses 0 16 WP)
+
+pair 20 36
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 67 (masses 0 16 WW)
+
+pair 60 76
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 68 (masses 0 17 PP)
+
+pair 0 17
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 69 (masses 0 17 PW)
+
+pair 40 57
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 70 (masses 0 17 WP)
+
+pair 20 37
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 71 (masses 0 17 WW)
+
+pair 60 77
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 72 (masses 0 18 PP)
+
+pair 0 18
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 73 (masses 0 18 PW)
+
+pair 40 58
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 74 (masses 0 18 WP)
+
+pair 20 38
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 75 (masses 0 18 WW)
+
+pair 60 78
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 76 (masses 0 19 PP)
+
+pair 0 19
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 77 (masses 0 19 PW)
+
+pair 40 59
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 78 (masses 0 19 WP)
+
+pair 20 39
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 79 (masses 0 19 WW)
+
+pair 60 79
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 80 (masses 1 1 PP)
+
+pair 1 1
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 81 (masses 1 1 PW)
+
+pair 41 41
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 82 (masses 1 1 WP)
+
+pair 21 21
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 83 (masses 1 1 WW)
+
+pair 61 61
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 84 (masses 1 2 PP)
+
+pair 1 2
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 85 (masses 1 2 PW)
+
+pair 41 42
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 86 (masses 1 2 WP)
+
+pair 21 22
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 87 (masses 1 2 WW)
+
+pair 61 62
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 88 (masses 1 3 PP)
+
+pair 1 3
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 89 (masses 1 3 PW)
+
+pair 41 43
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 90 (masses 1 3 WP)
+
+pair 21 23
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 91 (masses 1 3 WW)
+
+pair 61 63
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 92 (masses 1 4 PP)
+
+pair 1 4
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 93 (masses 1 4 PW)
+
+pair 41 44
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 94 (masses 1 4 WP)
+
+pair 21 24
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 95 (masses 1 4 WW)
+
+pair 61 64
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 96 (masses 1 5 PP)
+
+pair 1 5
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 97 (masses 1 5 PW)
+
+pair 41 45
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 98 (masses 1 5 WP)
+
+pair 21 25
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 99 (masses 1 5 WW)
+
+pair 61 65
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 100 (masses 1 6 PP)
+
+pair 1 6
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 101 (masses 1 6 PW)
+
+pair 41 46
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 102 (masses 1 6 WP)
+
+pair 21 26
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 103 (masses 1 6 WW)
+
+pair 61 66
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 104 (masses 1 7 PP)
+
+pair 1 7
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 105 (masses 1 7 PW)
+
+pair 41 47
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 106 (masses 1 7 WP)
+
+pair 21 27
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 107 (masses 1 7 WW)
+
+pair 61 67
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 108 (masses 1 8 PP)
+
+pair 1 8
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 109 (masses 1 8 PW)
+
+pair 41 48
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 110 (masses 1 8 WP)
+
+pair 21 28
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 111 (masses 1 8 WW)
+
+pair 61 68
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 112 (masses 1 9 PP)
+
+pair 1 9
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 113 (masses 1 9 PW)
+
+pair 41 49
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 114 (masses 1 9 WP)
+
+pair 21 29
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 115 (masses 1 9 WW)
+
+pair 61 69
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 116 (masses 1 10 PP)
+
+pair 1 10
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 117 (masses 1 10 PW)
+
+pair 41 50
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 118 (masses 1 10 WP)
+
+pair 21 30
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 119 (masses 1 10 WW)
+
+pair 61 70
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 120 (masses 1 11 PP)
+
+pair 1 11
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 121 (masses 1 11 PW)
+
+pair 41 51
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 122 (masses 1 11 WP)
+
+pair 21 31
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 123 (masses 1 11 WW)
+
+pair 61 71
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 124 (masses 1 12 PP)
+
+pair 1 12
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 125 (masses 1 12 PW)
+
+pair 41 52
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 126 (masses 1 12 WP)
+
+pair 21 32
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 127 (masses 1 12 WW)
+
+pair 61 72
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 128 (masses 1 13 PP)
+
+pair 1 13
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 129 (masses 1 13 PW)
+
+pair 41 53
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 130 (masses 1 13 WP)
+
+pair 21 33
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 131 (masses 1 13 WW)
+
+pair 61 73
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 132 (masses 1 14 PP)
+
+pair 1 14
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 133 (masses 1 14 PW)
+
+pair 41 54
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 134 (masses 1 14 WP)
+
+pair 21 34
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 135 (masses 1 14 WW)
+
+pair 61 74
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 136 (masses 1 15 PP)
+
+pair 1 15
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 137 (masses 1 15 PW)
+
+pair 41 55
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 138 (masses 1 15 WP)
+
+pair 21 35
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 139 (masses 1 15 WW)
+
+pair 61 75
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 140 (masses 1 16 PP)
+
+pair 1 16
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 141 (masses 1 16 PW)
+
+pair 41 56
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 142 (masses 1 16 WP)
+
+pair 21 36
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 143 (masses 1 16 WW)
+
+pair 61 76
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 144 (masses 1 17 PP)
+
+pair 1 17
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 145 (masses 1 17 PW)
+
+pair 41 57
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 146 (masses 1 17 WP)
+
+pair 21 37
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 147 (masses 1 17 WW)
+
+pair 61 77
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 148 (masses 1 18 PP)
+
+pair 1 18
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 149 (masses 1 18 PW)
+
+pair 41 58
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 150 (masses 1 18 WP)
+
+pair 21 38
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 151 (masses 1 18 WW)
+
+pair 61 78
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 152 (masses 1 19 PP)
+
+pair 1 19
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 153 (masses 1 19 PW)
+
+pair 41 59
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 154 (masses 1 19 WP)
+
+pair 21 39
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 155 (masses 1 19 WW)
+
+pair 61 79
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 156 (masses 2 2 PP)
+
+pair 2 2
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 157 (masses 2 2 PW)
+
+pair 42 42
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 158 (masses 2 2 WP)
+
+pair 22 22
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 159 (masses 2 2 WW)
+
+pair 62 62
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 160 (masses 2 3 PP)
+
+pair 2 3
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 161 (masses 2 3 PW)
+
+pair 42 43
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 162 (masses 2 3 WP)
+
+pair 22 23
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 163 (masses 2 3 WW)
+
+pair 62 63
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 164 (masses 2 4 PP)
+
+pair 2 4
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 165 (masses 2 4 PW)
+
+pair 42 44
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 166 (masses 2 4 WP)
+
+pair 22 24
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 167 (masses 2 4 WW)
+
+pair 62 64
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 168 (masses 2 5 PP)
+
+pair 2 5
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 169 (masses 2 5 PW)
+
+pair 42 45
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 170 (masses 2 5 WP)
+
+pair 22 25
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 171 (masses 2 5 WW)
+
+pair 62 65
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 172 (masses 2 6 PP)
+
+pair 2 6
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 173 (masses 2 6 PW)
+
+pair 42 46
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 174 (masses 2 6 WP)
+
+pair 22 26
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 175 (masses 2 6 WW)
+
+pair 62 66
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 176 (masses 2 7 PP)
+
+pair 2 7
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 177 (masses 2 7 PW)
+
+pair 42 47
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 178 (masses 2 7 WP)
+
+pair 22 27
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 179 (masses 2 7 WW)
+
+pair 62 67
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 180 (masses 2 8 PP)
+
+pair 2 8
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 181 (masses 2 8 PW)
+
+pair 42 48
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 182 (masses 2 8 WP)
+
+pair 22 28
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 183 (masses 2 8 WW)
+
+pair 62 68
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 184 (masses 2 9 PP)
+
+pair 2 9
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 185 (masses 2 9 PW)
+
+pair 42 49
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 186 (masses 2 9 WP)
+
+pair 22 29
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 187 (masses 2 9 WW)
+
+pair 62 69
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 188 (masses 2 10 PP)
+
+pair 2 10
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 189 (masses 2 10 PW)
+
+pair 42 50
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 190 (masses 2 10 WP)
+
+pair 22 30
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 191 (masses 2 10 WW)
+
+pair 62 70
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 192 (masses 2 11 PP)
+
+pair 2 11
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 193 (masses 2 11 PW)
+
+pair 42 51
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 194 (masses 2 11 WP)
+
+pair 22 31
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 195 (masses 2 11 WW)
+
+pair 62 71
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 196 (masses 2 12 PP)
+
+pair 2 12
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 197 (masses 2 12 PW)
+
+pair 42 52
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 198 (masses 2 12 WP)
+
+pair 22 32
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 199 (masses 2 12 WW)
+
+pair 62 72
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 200 (masses 2 13 PP)
+
+pair 2 13
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 201 (masses 2 13 PW)
+
+pair 42 53
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 202 (masses 2 13 WP)
+
+pair 22 33
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 203 (masses 2 13 WW)
+
+pair 62 73
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 204 (masses 2 14 PP)
+
+pair 2 14
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 205 (masses 2 14 PW)
+
+pair 42 54
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 206 (masses 2 14 WP)
+
+pair 22 34
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 207 (masses 2 14 WW)
+
+pair 62 74
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 208 (masses 2 15 PP)
+
+pair 2 15
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 209 (masses 2 15 PW)
+
+pair 42 55
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 210 (masses 2 15 WP)
+
+pair 22 35
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 211 (masses 2 15 WW)
+
+pair 62 75
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 212 (masses 2 16 PP)
+
+pair 2 16
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 213 (masses 2 16 PW)
+
+pair 42 56
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 214 (masses 2 16 WP)
+
+pair 22 36
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 215 (masses 2 16 WW)
+
+pair 62 76
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 216 (masses 2 17 PP)
+
+pair 2 17
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 217 (masses 2 17 PW)
+
+pair 42 57
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 218 (masses 2 17 WP)
+
+pair 22 37
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 219 (masses 2 17 WW)
+
+pair 62 77
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 220 (masses 2 18 PP)
+
+pair 2 18
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 221 (masses 2 18 PW)
+
+pair 42 58
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 222 (masses 2 18 WP)
+
+pair 22 38
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 223 (masses 2 18 WW)
+
+pair 62 78
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 224 (masses 2 19 PP)
+
+pair 2 19
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 225 (masses 2 19 PW)
+
+pair 42 59
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 226 (masses 2 19 WP)
+
+pair 22 39
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 227 (masses 2 19 WW)
+
+pair 62 79
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 228 (masses 3 3 PP)
+
+pair 3 3
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 229 (masses 3 3 PW)
+
+pair 43 43
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 230 (masses 3 3 WP)
+
+pair 23 23
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 231 (masses 3 3 WW)
+
+pair 63 63
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 232 (masses 3 4 PP)
+
+pair 3 4
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 233 (masses 3 4 PW)
+
+pair 43 44
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 234 (masses 3 4 WP)
+
+pair 23 24
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 235 (masses 3 4 WW)
+
+pair 63 64
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 236 (masses 3 5 PP)
+
+pair 3 5
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 237 (masses 3 5 PW)
+
+pair 43 45
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 238 (masses 3 5 WP)
+
+pair 23 25
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 239 (masses 3 5 WW)
+
+pair 63 65
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 240 (masses 3 6 PP)
+
+pair 3 6
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 241 (masses 3 6 PW)
+
+pair 43 46
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 242 (masses 3 6 WP)
+
+pair 23 26
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 243 (masses 3 6 WW)
+
+pair 63 66
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 244 (masses 3 7 PP)
+
+pair 3 7
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 245 (masses 3 7 PW)
+
+pair 43 47
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 246 (masses 3 7 WP)
+
+pair 23 27
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 247 (masses 3 7 WW)
+
+pair 63 67
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 248 (masses 3 8 PP)
+
+pair 3 8
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 249 (masses 3 8 PW)
+
+pair 43 48
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 250 (masses 3 8 WP)
+
+pair 23 28
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 251 (masses 3 8 WW)
+
+pair 63 68
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 252 (masses 3 9 PP)
+
+pair 3 9
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 253 (masses 3 9 PW)
+
+pair 43 49
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 254 (masses 3 9 WP)
+
+pair 23 29
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 255 (masses 3 9 WW)
+
+pair 63 69
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 256 (masses 3 10 PP)
+
+pair 3 10
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 257 (masses 3 10 PW)
+
+pair 43 50
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 258 (masses 3 10 WP)
+
+pair 23 30
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 259 (masses 3 10 WW)
+
+pair 63 70
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 260 (masses 3 11 PP)
+
+pair 3 11
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 261 (masses 3 11 PW)
+
+pair 43 51
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 262 (masses 3 11 WP)
+
+pair 23 31
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 263 (masses 3 11 WW)
+
+pair 63 71
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 264 (masses 3 12 PP)
+
+pair 3 12
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 265 (masses 3 12 PW)
+
+pair 43 52
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 266 (masses 3 12 WP)
+
+pair 23 32
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 267 (masses 3 12 WW)
+
+pair 63 72
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 268 (masses 3 13 PP)
+
+pair 3 13
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 269 (masses 3 13 PW)
+
+pair 43 53
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 270 (masses 3 13 WP)
+
+pair 23 33
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 271 (masses 3 13 WW)
+
+pair 63 73
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 272 (masses 3 14 PP)
+
+pair 3 14
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 273 (masses 3 14 PW)
+
+pair 43 54
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 274 (masses 3 14 WP)
+
+pair 23 34
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 275 (masses 3 14 WW)
+
+pair 63 74
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 276 (masses 3 15 PP)
+
+pair 3 15
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 277 (masses 3 15 PW)
+
+pair 43 55
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 278 (masses 3 15 WP)
+
+pair 23 35
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 279 (masses 3 15 WW)
+
+pair 63 75
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 280 (masses 3 16 PP)
+
+pair 3 16
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 281 (masses 3 16 PW)
+
+pair 43 56
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 282 (masses 3 16 WP)
+
+pair 23 36
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 283 (masses 3 16 WW)
+
+pair 63 76
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 284 (masses 3 17 PP)
+
+pair 3 17
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 285 (masses 3 17 PW)
+
+pair 43 57
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 286 (masses 3 17 WP)
+
+pair 23 37
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 287 (masses 3 17 WW)
+
+pair 63 77
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 288 (masses 3 18 PP)
+
+pair 3 18
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 289 (masses 3 18 PW)
+
+pair 43 58
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 290 (masses 3 18 WP)
+
+pair 23 38
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 291 (masses 3 18 WW)
+
+pair 63 78
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 292 (masses 3 19 PP)
+
+pair 3 19
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 293 (masses 3 19 PW)
+
+pair 43 59
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 294 (masses 3 19 WP)
+
+pair 23 39
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 295 (masses 3 19 WW)
+
+pair 63 79
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 296 (masses 4 4 PP)
+
+pair 4 4
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 297 (masses 4 4 PW)
+
+pair 44 44
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 298 (masses 4 4 WP)
+
+pair 24 24
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 299 (masses 4 4 WW)
+
+pair 64 64
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 300 (masses 4 5 PP)
+
+pair 4 5
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 301 (masses 4 5 PW)
+
+pair 44 45
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 302 (masses 4 5 WP)
+
+pair 24 25
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 303 (masses 4 5 WW)
+
+pair 64 65
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 304 (masses 4 6 PP)
+
+pair 4 6
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 305 (masses 4 6 PW)
+
+pair 44 46
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 306 (masses 4 6 WP)
+
+pair 24 26
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 307 (masses 4 6 WW)
+
+pair 64 66
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 308 (masses 4 7 PP)
+
+pair 4 7
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 309 (masses 4 7 PW)
+
+pair 44 47
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 310 (masses 4 7 WP)
+
+pair 24 27
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 311 (masses 4 7 WW)
+
+pair 64 67
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 312 (masses 4 8 PP)
+
+pair 4 8
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 313 (masses 4 8 PW)
+
+pair 44 48
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 314 (masses 4 8 WP)
+
+pair 24 28
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 315 (masses 4 8 WW)
+
+pair 64 68
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 316 (masses 4 9 PP)
+
+pair 4 9
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 317 (masses 4 9 PW)
+
+pair 44 49
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 318 (masses 4 9 WP)
+
+pair 24 29
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 319 (masses 4 9 WW)
+
+pair 64 69
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 320 (masses 4 10 PP)
+
+pair 4 10
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 321 (masses 4 10 PW)
+
+pair 44 50
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 322 (masses 4 10 WP)
+
+pair 24 30
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 323 (masses 4 10 WW)
+
+pair 64 70
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 324 (masses 4 11 PP)
+
+pair 4 11
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 325 (masses 4 11 PW)
+
+pair 44 51
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 326 (masses 4 11 WP)
+
+pair 24 31
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 327 (masses 4 11 WW)
+
+pair 64 71
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 328 (masses 4 12 PP)
+
+pair 4 12
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 329 (masses 4 12 PW)
+
+pair 44 52
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 330 (masses 4 12 WP)
+
+pair 24 32
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 331 (masses 4 12 WW)
+
+pair 64 72
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 332 (masses 4 13 PP)
+
+pair 4 13
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 333 (masses 4 13 PW)
+
+pair 44 53
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 334 (masses 4 13 WP)
+
+pair 24 33
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 335 (masses 4 13 WW)
+
+pair 64 73
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 336 (masses 4 14 PP)
+
+pair 4 14
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 337 (masses 4 14 PW)
+
+pair 44 54
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 338 (masses 4 14 WP)
+
+pair 24 34
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 339 (masses 4 14 WW)
+
+pair 64 74
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 340 (masses 4 15 PP)
+
+pair 4 15
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 341 (masses 4 15 PW)
+
+pair 44 55
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 342 (masses 4 15 WP)
+
+pair 24 35
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 343 (masses 4 15 WW)
+
+pair 64 75
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 344 (masses 4 16 PP)
+
+pair 4 16
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 345 (masses 4 16 PW)
+
+pair 44 56
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 346 (masses 4 16 WP)
+
+pair 24 36
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 347 (masses 4 16 WW)
+
+pair 64 76
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 348 (masses 4 17 PP)
+
+pair 4 17
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 349 (masses 4 17 PW)
+
+pair 44 57
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 350 (masses 4 17 WP)
+
+pair 24 37
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 351 (masses 4 17 WW)
+
+pair 64 77
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 352 (masses 4 18 PP)
+
+pair 4 18
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 353 (masses 4 18 PW)
+
+pair 44 58
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 354 (masses 4 18 WP)
+
+pair 24 38
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 355 (masses 4 18 WW)
+
+pair 64 78
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 356 (masses 4 19 PP)
+
+pair 4 19
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 357 (masses 4 19 PW)
+
+pair 44 59
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 358 (masses 4 19 WP)
+
+pair 24 39
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 359 (masses 4 19 WW)
+
+pair 64 79
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 360 (masses 5 5 PP)
+
+pair 5 5
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 361 (masses 5 5 PW)
+
+pair 45 45
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 362 (masses 5 5 WP)
+
+pair 25 25
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 363 (masses 5 5 WW)
+
+pair 65 65
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 364 (masses 5 6 PP)
+
+pair 5 6
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 365 (masses 5 6 PW)
+
+pair 45 46
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 366 (masses 5 6 WP)
+
+pair 25 26
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 367 (masses 5 6 WW)
+
+pair 65 66
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 368 (masses 5 7 PP)
+
+pair 5 7
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 369 (masses 5 7 PW)
+
+pair 45 47
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 370 (masses 5 7 WP)
+
+pair 25 27
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 371 (masses 5 7 WW)
+
+pair 65 67
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 372 (masses 5 8 PP)
+
+pair 5 8
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 373 (masses 5 8 PW)
+
+pair 45 48
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 374 (masses 5 8 WP)
+
+pair 25 28
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 375 (masses 5 8 WW)
+
+pair 65 68
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 376 (masses 5 9 PP)
+
+pair 5 9
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 377 (masses 5 9 PW)
+
+pair 45 49
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 378 (masses 5 9 WP)
+
+pair 25 29
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 379 (masses 5 9 WW)
+
+pair 65 69
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 380 (masses 5 10 PP)
+
+pair 5 10
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 381 (masses 5 10 PW)
+
+pair 45 50
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 382 (masses 5 10 WP)
+
+pair 25 30
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 383 (masses 5 10 WW)
+
+pair 65 70
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 384 (masses 5 11 PP)
+
+pair 5 11
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 385 (masses 5 11 PW)
+
+pair 45 51
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 386 (masses 5 11 WP)
+
+pair 25 31
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 387 (masses 5 11 WW)
+
+pair 65 71
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 388 (masses 5 12 PP)
+
+pair 5 12
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 389 (masses 5 12 PW)
+
+pair 45 52
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 390 (masses 5 12 WP)
+
+pair 25 32
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 391 (masses 5 12 WW)
+
+pair 65 72
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 392 (masses 5 13 PP)
+
+pair 5 13
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 393 (masses 5 13 PW)
+
+pair 45 53
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 394 (masses 5 13 WP)
+
+pair 25 33
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 395 (masses 5 13 WW)
+
+pair 65 73
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 396 (masses 5 14 PP)
+
+pair 5 14
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 397 (masses 5 14 PW)
+
+pair 45 54
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 398 (masses 5 14 WP)
+
+pair 25 34
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 399 (masses 5 14 WW)
+
+pair 65 74
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 400 (masses 5 15 PP)
+
+pair 5 15
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 401 (masses 5 15 PW)
+
+pair 45 55
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 402 (masses 5 15 WP)
+
+pair 25 35
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 403 (masses 5 15 WW)
+
+pair 65 75
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 404 (masses 5 16 PP)
+
+pair 5 16
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 405 (masses 5 16 PW)
+
+pair 45 56
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 406 (masses 5 16 WP)
+
+pair 25 36
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 407 (masses 5 16 WW)
+
+pair 65 76
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 408 (masses 5 17 PP)
+
+pair 5 17
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 409 (masses 5 17 PW)
+
+pair 45 57
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 410 (masses 5 17 WP)
+
+pair 25 37
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 411 (masses 5 17 WW)
+
+pair 65 77
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 412 (masses 5 18 PP)
+
+pair 5 18
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 413 (masses 5 18 PW)
+
+pair 45 58
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 414 (masses 5 18 WP)
+
+pair 25 38
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 415 (masses 5 18 WW)
+
+pair 65 78
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 416 (masses 5 19 PP)
+
+pair 5 19
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 417 (masses 5 19 PW)
+
+pair 45 59
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 418 (masses 5 19 WP)
+
+pair 25 39
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 419 (masses 5 19 WW)
+
+pair 65 79
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 420 (masses 6 6 PP)
+
+pair 6 6
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 421 (masses 6 6 PW)
+
+pair 46 46
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 422 (masses 6 6 WP)
+
+pair 26 26
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 423 (masses 6 6 WW)
+
+pair 66 66
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 424 (masses 6 7 PP)
+
+pair 6 7
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 425 (masses 6 7 PW)
+
+pair 46 47
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 426 (masses 6 7 WP)
+
+pair 26 27
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 427 (masses 6 7 WW)
+
+pair 66 67
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 428 (masses 6 8 PP)
+
+pair 6 8
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 429 (masses 6 8 PW)
+
+pair 46 48
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 430 (masses 6 8 WP)
+
+pair 26 28
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 431 (masses 6 8 WW)
+
+pair 66 68
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 432 (masses 6 9 PP)
+
+pair 6 9
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 433 (masses 6 9 PW)
+
+pair 46 49
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 434 (masses 6 9 WP)
+
+pair 26 29
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 435 (masses 6 9 WW)
+
+pair 66 69
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 436 (masses 6 10 PP)
+
+pair 6 10
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 437 (masses 6 10 PW)
+
+pair 46 50
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 438 (masses 6 10 WP)
+
+pair 26 30
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 439 (masses 6 10 WW)
+
+pair 66 70
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 440 (masses 6 11 PP)
+
+pair 6 11
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 441 (masses 6 11 PW)
+
+pair 46 51
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 442 (masses 6 11 WP)
+
+pair 26 31
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 443 (masses 6 11 WW)
+
+pair 66 71
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 444 (masses 6 12 PP)
+
+pair 6 12
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 445 (masses 6 12 PW)
+
+pair 46 52
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 446 (masses 6 12 WP)
+
+pair 26 32
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 447 (masses 6 12 WW)
+
+pair 66 72
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 448 (masses 6 13 PP)
+
+pair 6 13
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 449 (masses 6 13 PW)
+
+pair 46 53
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 450 (masses 6 13 WP)
+
+pair 26 33
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 451 (masses 6 13 WW)
+
+pair 66 73
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 452 (masses 6 14 PP)
+
+pair 6 14
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 453 (masses 6 14 PW)
+
+pair 46 54
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 454 (masses 6 14 WP)
+
+pair 26 34
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 455 (masses 6 14 WW)
+
+pair 66 74
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 456 (masses 6 15 PP)
+
+pair 6 15
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 457 (masses 6 15 PW)
+
+pair 46 55
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 458 (masses 6 15 WP)
+
+pair 26 35
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 459 (masses 6 15 WW)
+
+pair 66 75
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 460 (masses 6 16 PP)
+
+pair 6 16
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 461 (masses 6 16 PW)
+
+pair 46 56
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 462 (masses 6 16 WP)
+
+pair 26 36
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 463 (masses 6 16 WW)
+
+pair 66 76
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 464 (masses 6 17 PP)
+
+pair 6 17
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 465 (masses 6 17 PW)
+
+pair 46 57
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 466 (masses 6 17 WP)
+
+pair 26 37
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 467 (masses 6 17 WW)
+
+pair 66 77
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 468 (masses 6 18 PP)
+
+pair 6 18
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 469 (masses 6 18 PW)
+
+pair 46 58
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 470 (masses 6 18 WP)
+
+pair 26 38
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 471 (masses 6 18 WW)
+
+pair 66 78
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 472 (masses 6 19 PP)
+
+pair 6 19
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 473 (masses 6 19 PW)
+
+pair 46 59
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 474 (masses 6 19 WP)
+
+pair 26 39
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 475 (masses 6 19 WW)
+
+pair 66 79
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 476 (masses 7 7 PP)
+
+pair 7 7
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 477 (masses 7 7 PW)
+
+pair 47 47
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 478 (masses 7 7 WP)
+
+pair 27 27
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 479 (masses 7 7 WW)
+
+pair 67 67
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 480 (masses 7 8 PP)
+
+pair 7 8
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 481 (masses 7 8 PW)
+
+pair 47 48
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 482 (masses 7 8 WP)
+
+pair 27 28
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 483 (masses 7 8 WW)
+
+pair 67 68
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 484 (masses 7 9 PP)
+
+pair 7 9
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 485 (masses 7 9 PW)
+
+pair 47 49
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 486 (masses 7 9 WP)
+
+pair 27 29
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 487 (masses 7 9 WW)
+
+pair 67 69
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 488 (masses 7 10 PP)
+
+pair 7 10
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 489 (masses 7 10 PW)
+
+pair 47 50
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 490 (masses 7 10 WP)
+
+pair 27 30
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 491 (masses 7 10 WW)
+
+pair 67 70
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 492 (masses 7 11 PP)
+
+pair 7 11
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 493 (masses 7 11 PW)
+
+pair 47 51
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 494 (masses 7 11 WP)
+
+pair 27 31
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 495 (masses 7 11 WW)
+
+pair 67 71
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 496 (masses 7 12 PP)
+
+pair 7 12
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 497 (masses 7 12 PW)
+
+pair 47 52
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 498 (masses 7 12 WP)
+
+pair 27 32
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 499 (masses 7 12 WW)
+
+pair 67 72
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 500 (masses 7 13 PP)
+
+pair 7 13
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 501 (masses 7 13 PW)
+
+pair 47 53
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 502 (masses 7 13 WP)
+
+pair 27 33
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 503 (masses 7 13 WW)
+
+pair 67 73
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 504 (masses 7 14 PP)
+
+pair 7 14
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 505 (masses 7 14 PW)
+
+pair 47 54
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 506 (masses 7 14 WP)
+
+pair 27 34
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 507 (masses 7 14 WW)
+
+pair 67 74
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 508 (masses 7 15 PP)
+
+pair 7 15
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 509 (masses 7 15 PW)
+
+pair 47 55
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 510 (masses 7 15 WP)
+
+pair 27 35
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 511 (masses 7 15 WW)
+
+pair 67 75
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 512 (masses 7 16 PP)
+
+pair 7 16
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 513 (masses 7 16 PW)
+
+pair 47 56
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 514 (masses 7 16 WP)
+
+pair 27 36
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 515 (masses 7 16 WW)
+
+pair 67 76
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 516 (masses 7 17 PP)
+
+pair 7 17
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 517 (masses 7 17 PW)
+
+pair 47 57
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 518 (masses 7 17 WP)
+
+pair 27 37
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 519 (masses 7 17 WW)
+
+pair 67 77
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 520 (masses 7 18 PP)
+
+pair 7 18
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 521 (masses 7 18 PW)
+
+pair 47 58
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 522 (masses 7 18 WP)
+
+pair 27 38
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 523 (masses 7 18 WW)
+
+pair 67 78
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 524 (masses 7 19 PP)
+
+pair 7 19
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 525 (masses 7 19 PW)
+
+pair 47 59
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 526 (masses 7 19 WP)
+
+pair 27 39
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 527 (masses 7 19 WW)
+
+pair 67 79
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 528 (masses 8 8 PP)
+
+pair 8 8
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 529 (masses 8 8 PW)
+
+pair 48 48
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 530 (masses 8 8 WP)
+
+pair 28 28
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 531 (masses 8 8 WW)
+
+pair 68 68
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 532 (masses 8 9 PP)
+
+pair 8 9
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 533 (masses 8 9 PW)
+
+pair 48 49
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 534 (masses 8 9 WP)
+
+pair 28 29
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 535 (masses 8 9 WW)
+
+pair 68 69
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 536 (masses 8 10 PP)
+
+pair 8 10
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 537 (masses 8 10 PW)
+
+pair 48 50
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 538 (masses 8 10 WP)
+
+pair 28 30
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 539 (masses 8 10 WW)
+
+pair 68 70
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 540 (masses 8 11 PP)
+
+pair 8 11
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 541 (masses 8 11 PW)
+
+pair 48 51
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 542 (masses 8 11 WP)
+
+pair 28 31
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 543 (masses 8 11 WW)
+
+pair 68 71
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 544 (masses 8 12 PP)
+
+pair 8 12
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 545 (masses 8 12 PW)
+
+pair 48 52
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 546 (masses 8 12 WP)
+
+pair 28 32
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 547 (masses 8 12 WW)
+
+pair 68 72
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 548 (masses 8 13 PP)
+
+pair 8 13
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 549 (masses 8 13 PW)
+
+pair 48 53
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 550 (masses 8 13 WP)
+
+pair 28 33
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 551 (masses 8 13 WW)
+
+pair 68 73
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 552 (masses 8 14 PP)
+
+pair 8 14
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 553 (masses 8 14 PW)
+
+pair 48 54
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 554 (masses 8 14 WP)
+
+pair 28 34
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 555 (masses 8 14 WW)
+
+pair 68 74
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 556 (masses 8 15 PP)
+
+pair 8 15
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 557 (masses 8 15 PW)
+
+pair 48 55
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 558 (masses 8 15 WP)
+
+pair 28 35
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 559 (masses 8 15 WW)
+
+pair 68 75
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 560 (masses 8 16 PP)
+
+pair 8 16
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 561 (masses 8 16 PW)
+
+pair 48 56
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 562 (masses 8 16 WP)
+
+pair 28 36
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 563 (masses 8 16 WW)
+
+pair 68 76
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 564 (masses 8 17 PP)
+
+pair 8 17
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 565 (masses 8 17 PW)
+
+pair 48 57
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 566 (masses 8 17 WP)
+
+pair 28 37
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 567 (masses 8 17 WW)
+
+pair 68 77
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 568 (masses 8 18 PP)
+
+pair 8 18
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 569 (masses 8 18 PW)
+
+pair 48 58
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 570 (masses 8 18 WP)
+
+pair 28 38
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 571 (masses 8 18 WW)
+
+pair 68 78
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 572 (masses 8 19 PP)
+
+pair 8 19
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 573 (masses 8 19 PW)
+
+pair 48 59
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 574 (masses 8 19 WP)
+
+pair 28 39
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 575 (masses 8 19 WW)
+
+pair 68 79
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 576 (masses 9 9 PP)
+
+pair 9 9
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 577 (masses 9 9 PW)
+
+pair 49 49
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 578 (masses 9 9 WP)
+
+pair 29 29
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 579 (masses 9 9 WW)
+
+pair 69 69
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 580 (masses 9 10 PP)
+
+pair 9 10
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 581 (masses 9 10 PW)
+
+pair 49 50
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 582 (masses 9 10 WP)
+
+pair 29 30
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 583 (masses 9 10 WW)
+
+pair 69 70
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 584 (masses 9 11 PP)
+
+pair 9 11
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 585 (masses 9 11 PW)
+
+pair 49 51
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 586 (masses 9 11 WP)
+
+pair 29 31
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 587 (masses 9 11 WW)
+
+pair 69 71
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 588 (masses 9 12 PP)
+
+pair 9 12
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 589 (masses 9 12 PW)
+
+pair 49 52
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 590 (masses 9 12 WP)
+
+pair 29 32
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 591 (masses 9 12 WW)
+
+pair 69 72
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 592 (masses 9 13 PP)
+
+pair 9 13
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 593 (masses 9 13 PW)
+
+pair 49 53
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 594 (masses 9 13 WP)
+
+pair 29 33
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 595 (masses 9 13 WW)
+
+pair 69 73
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 596 (masses 9 14 PP)
+
+pair 9 14
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 597 (masses 9 14 PW)
+
+pair 49 54
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 598 (masses 9 14 WP)
+
+pair 29 34
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 599 (masses 9 14 WW)
+
+pair 69 74
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 600 (masses 9 15 PP)
+
+pair 9 15
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 601 (masses 9 15 PW)
+
+pair 49 55
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 602 (masses 9 15 WP)
+
+pair 29 35
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 603 (masses 9 15 WW)
+
+pair 69 75
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 604 (masses 9 16 PP)
+
+pair 9 16
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 605 (masses 9 16 PW)
+
+pair 49 56
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 606 (masses 9 16 WP)
+
+pair 29 36
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 607 (masses 9 16 WW)
+
+pair 69 76
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 608 (masses 9 17 PP)
+
+pair 9 17
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 609 (masses 9 17 PW)
+
+pair 49 57
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 610 (masses 9 17 WP)
+
+pair 29 37
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 611 (masses 9 17 WW)
+
+pair 69 77
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 612 (masses 9 18 PP)
+
+pair 9 18
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 613 (masses 9 18 PW)
+
+pair 49 58
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 614 (masses 9 18 WP)
+
+pair 29 38
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 615 (masses 9 18 WW)
+
+pair 69 78
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 616 (masses 9 19 PP)
+
+pair 9 19
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 617 (masses 9 19 PW)
+
+pair 49 59
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 618 (masses 9 19 WP)
+
+pair 29 39
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 619 (masses 9 19 WW)
+
+pair 69 79
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 620 (masses 10 10 PP)
+
+pair 10 10
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 621 (masses 10 10 PW)
+
+pair 50 50
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 622 (masses 10 10 WP)
+
+pair 30 30
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 623 (masses 10 10 WW)
+
+pair 70 70
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 624 (masses 10 11 PP)
+
+pair 10 11
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 625 (masses 10 11 PW)
+
+pair 50 51
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 626 (masses 10 11 WP)
+
+pair 30 31
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 627 (masses 10 11 WW)
+
+pair 70 71
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 628 (masses 10 12 PP)
+
+pair 10 12
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 629 (masses 10 12 PW)
+
+pair 50 52
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 630 (masses 10 12 WP)
+
+pair 30 32
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 631 (masses 10 12 WW)
+
+pair 70 72
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 632 (masses 10 13 PP)
+
+pair 10 13
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 633 (masses 10 13 PW)
+
+pair 50 53
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 634 (masses 10 13 WP)
+
+pair 30 33
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 635 (masses 10 13 WW)
+
+pair 70 73
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 636 (masses 10 14 PP)
+
+pair 10 14
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 637 (masses 10 14 PW)
+
+pair 50 54
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 638 (masses 10 14 WP)
+
+pair 30 34
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 639 (masses 10 14 WW)
+
+pair 70 74
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 640 (masses 10 15 PP)
+
+pair 10 15
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 641 (masses 10 15 PW)
+
+pair 50 55
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 642 (masses 10 15 WP)
+
+pair 30 35
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 643 (masses 10 15 WW)
+
+pair 70 75
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 644 (masses 10 16 PP)
+
+pair 10 16
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 645 (masses 10 16 PW)
+
+pair 50 56
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 646 (masses 10 16 WP)
+
+pair 30 36
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 647 (masses 10 16 WW)
+
+pair 70 76
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 648 (masses 10 17 PP)
+
+pair 10 17
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 649 (masses 10 17 PW)
+
+pair 50 57
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 650 (masses 10 17 WP)
+
+pair 30 37
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 651 (masses 10 17 WW)
+
+pair 70 77
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 652 (masses 10 18 PP)
+
+pair 10 18
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 653 (masses 10 18 PW)
+
+pair 50 58
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 654 (masses 10 18 WP)
+
+pair 30 38
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 655 (masses 10 18 WW)
+
+pair 70 78
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 656 (masses 10 19 PP)
+
+pair 10 19
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 657 (masses 10 19 PW)
+
+pair 50 59
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 658 (masses 10 19 WP)
+
+pair 30 39
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 659 (masses 10 19 WW)
+
+pair 70 79
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 660 (masses 11 11 PP)
+
+pair 11 11
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 661 (masses 11 11 PW)
+
+pair 51 51
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 662 (masses 11 11 WP)
+
+pair 31 31
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 663 (masses 11 11 WW)
+
+pair 71 71
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 664 (masses 11 12 PP)
+
+pair 11 12
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 665 (masses 11 12 PW)
+
+pair 51 52
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 666 (masses 11 12 WP)
+
+pair 31 32
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 667 (masses 11 12 WW)
+
+pair 71 72
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 668 (masses 11 13 PP)
+
+pair 11 13
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 669 (masses 11 13 PW)
+
+pair 51 53
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 670 (masses 11 13 WP)
+
+pair 31 33
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 671 (masses 11 13 WW)
+
+pair 71 73
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 672 (masses 11 14 PP)
+
+pair 11 14
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 673 (masses 11 14 PW)
+
+pair 51 54
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 674 (masses 11 14 WP)
+
+pair 31 34
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 675 (masses 11 14 WW)
+
+pair 71 74
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 676 (masses 11 15 PP)
+
+pair 11 15
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 677 (masses 11 15 PW)
+
+pair 51 55
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 678 (masses 11 15 WP)
+
+pair 31 35
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 679 (masses 11 15 WW)
+
+pair 71 75
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 680 (masses 11 16 PP)
+
+pair 11 16
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 681 (masses 11 16 PW)
+
+pair 51 56
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 682 (masses 11 16 WP)
+
+pair 31 36
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 683 (masses 11 16 WW)
+
+pair 71 76
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 684 (masses 11 17 PP)
+
+pair 11 17
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 685 (masses 11 17 PW)
+
+pair 51 57
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 686 (masses 11 17 WP)
+
+pair 31 37
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 687 (masses 11 17 WW)
+
+pair 71 77
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 688 (masses 11 18 PP)
+
+pair 11 18
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 689 (masses 11 18 PW)
+
+pair 51 58
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 690 (masses 11 18 WP)
+
+pair 31 38
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 691 (masses 11 18 WW)
+
+pair 71 78
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 692 (masses 11 19 PP)
+
+pair 11 19
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 693 (masses 11 19 PW)
+
+pair 51 59
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 694 (masses 11 19 WP)
+
+pair 31 39
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 695 (masses 11 19 WW)
+
+pair 71 79
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 696 (masses 12 12 PP)
+
+pair 12 12
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 697 (masses 12 12 PW)
+
+pair 52 52
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 698 (masses 12 12 WP)
+
+pair 32 32
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 699 (masses 12 12 WW)
+
+pair 72 72
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 700 (masses 13 13 PP)
+
+pair 13 13
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 701 (masses 13 13 PW)
+
+pair 53 53
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 702 (masses 13 13 WP)
+
+pair 33 33
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 703 (masses 13 13 WW)
+
+pair 73 73
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 704 (masses 14 14 PP)
+
+pair 14 14
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 705 (masses 14 14 PW)
+
+pair 54 54
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 706 (masses 14 14 WP)
+
+pair 34 34
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 707 (masses 14 14 WW)
+
+pair 74 74
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 708 (masses 15 15 PP)
+
+pair 15 15
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 709 (masses 15 15 PW)
+
+pair 55 55
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 710 (masses 15 15 WP)
+
+pair 35 35
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 711 (masses 15 15 WW)
+
+pair 75 75
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 712 (masses 16 16 PP)
+
+pair 16 16
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 713 (masses 16 16 PW)
+
+pair 56 56
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 714 (masses 16 16 WP)
+
+pair 36 36
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 715 (masses 16 16 WW)
+
+pair 76 76
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 716 (masses 17 17 PP)
+
+pair 17 17
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 717 (masses 17 17 PW)
+
+pair 57 57
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 718 (masses 17 17 WP)
+
+pair 37 37
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 719 (masses 17 17 WW)
+
+pair 77 77
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 720 (masses 18 18 PP)
+
+pair 18 18
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 721 (masses 18 18 PW)
+
+pair 58 58
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 722 (masses 18 18 WP)
+
+pair 38 38
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 723 (masses 18 18 WW)
+
+pair 78 78
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# pair 724 (masses 19 19 PP)
+
+pair 19 19
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 725 (masses 19 19 PW)
+
+pair 59 59
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 1/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+# pair 726 (masses 19 19 WP)
+
+pair 39 39
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^2]
+
+correlator POINT_KAON_5 p000  1 * 1.4954220637948678267e-13 pion5  0 0 0 E E E
+
+# pair 727 (masses 19 19 WW)
+
+pair 79 79
+spectrum_request meson
+
+forget_corr
+r_offset 0 0 0 35
+
+number_of_correlators 1
+
+# Normalization is 4/[3*(vol3)^3]
+
+correlator WALL_KAON_5 p000  1 * 5.0081382344810545508e-20 pion5  0 0 0 E E E
+
+
+# Description of baryons
+
+number_of_baryons 0
+

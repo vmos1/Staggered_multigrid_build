@@ -1,11 +1,8 @@
 #!/bin/bash
 date
 #############
-BUILD_DIR=/gpfs/alpine/lgt104/proj-shared/ayyar/builds_summit/install_Dec1_2022
-
-#############
 ## Source environment
-source ${BUILD_DIR}/install_scripts/setup_env_summit.sh
+source ${BUILD_DIR}/install_scripts/setup_env.sh
 
 ############
 ## Build QUDA
@@ -29,7 +26,7 @@ else
 fi
 
 cd $QUDA_BUILD
-cmake -DCMAKE_BUILD_TYPE=RELEASE -DQUDA_DIRAC_DEFAULT_OFF=ON -DQUDA_DIRAC_STAGGERED=ON -DQUDA_GPU_ARCH=sm_70 -DQUDA_DOWNLOAD_USQCD=ON -DQUDA_QIO=ON -DQUDA_QMP=ON -DQUDA_MULTIGRID=ON $QUDA_SRC
+cmake -DCMAKE_BUILD_TYPE=RELEASE -DQUDA_DIRAC_DEFAULT_OFF=ON -DQUDA_DIRAC_STAGGERED=ON -DQUDA_GPU_ARCH=sm_70 -DQUDA_DOWNLOAD_USQCD=ON -DQUDA_QIO=ON -DQUDA_QMP=ON -DQUDA_MULTIGRID=ON -DQUDA_MULTIGRID_NVEC_LIST    ="24,64,96" $QUDA_SRC
 nice make -j 4
 make install
 popd
