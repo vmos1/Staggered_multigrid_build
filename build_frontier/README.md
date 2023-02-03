@@ -1,4 +1,4 @@
-# Instructions for building and running Staggered Multigrid on Crusher and Frontier supercomputers
+# Instructions for building and running Staggered Multigrid on the Frontier supercomputer
 We need to build QUDA and MILC in sequence.  QUDA and MILC can each be built with a single script. 
 The procedure is described below.
 ## **Generate build scripts**: 
