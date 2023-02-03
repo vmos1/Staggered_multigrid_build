@@ -3,9 +3,8 @@ We need to build QUDA and MILC in sequence.  QUDA can be built with a single scr
 The procedure is described below.
 ## **Generate build scripts**: 
 You need 2 directories: ```build_dir``` and ```run_dir```.
-- **Using the jupyter notebook**  :
-  - Edit the folder names in `dict_pars['build_dir']` and `dict_pars['run_dir']` to point to the appropriate locations.
-  - Run the entire jupyter notebook [build_summit/build_install_scripts_summit.ipynb](https://github.com/vmos1/Staggered_multigrid_build/blob/main/build_summit/build_install_scripts_summit.ipynb). It will copy all install scripts to the desired location in `build_dir`.
+- **Using the python script**  :
+  - Run the script [build_summit/build_install_scripts_summit.py](https://github.com/vmos1/Staggered_multigrid_build/blob/main/build_summit/build_install_scripts_summit.py) as `python build_install_scripts_summit.py -bdir <build_dir>`. It will copy all install scripts to the desired location in `build_dir`.
 
  **OR Alternatively**  
 - **Manually copy and edit scripts** : 
