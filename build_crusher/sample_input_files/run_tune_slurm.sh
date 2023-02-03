@@ -1,11 +1,12 @@
-#!/bin/bash 
+#!/bin/bash
 
 #SBATCH -A lgt104_crusher
 #SBATCH -J QudaStagMG
 #SBATCH -o %x-%j.out
 #SBATCH -t 02:00:00
 #SBATCH -N 8
-#SBATCH --cpus-per-task=8
+#SBATCH -C nvme
+#SBATCH --cpus-per-task=7
 #SBATCH --ntasks-per-node=8
 
 nodes=8
@@ -34,16 +35,43 @@ echo "EXECUTABLE =  $executable" >> $output
 ls -l $executable >> $output
 echo "RUNARGS = $runargs" >> $output
 
-export OMP_NUM_THREADS=8
+#export OMP_NUM_THREADS=7
 export MPICH_ENV_DISPLAY=1
 export MPICH_GPU_SUPPORT_ENABLED=1
 export MPICH_SMP_SINGLE_COPY_MODE=XPMEM
 export MPICH_COLL_SYNC=MPI_Bcast
-export MPICH_OFI_NIC_VERBOSE=1
+export MPICH_OFI_NIC_VERBOSE=2
 
 export APP="$executable $runargs $input $output"
 echo ${APP} >> ${output}
-cmd="srun -n $((nodes*8)) -N $nodes --unbuffered --gpus-per-node=8 --ntasks-per-node=8 --cpus-per-task=8 --distribution=*:block ${APP}"
+
+export QUDA_RESOURCE_PATH=${PROGDIR}
+export QUDA_PROFILE_OUTPUT_BASE=profile_64
+
+##
+export GPUDIRECT=" -gpudirect "
+export MPICH_OFI_NIC_POLICY=NUMA
+export FI_MR_CACHE_MAX_COUNT=0
+
+# New vars
+rm -f ./core
+ulimit -c unlimited 
+export OMP_NUM_THREADS=7
+export OMP_PROC_BIND=spread
+MASK_0="0x00fe000000000000"
+MASK_1="0xfe00000000000000"
+MASK_2="0x0000000000fe0000"
+MASK_3="0x00000000fe000000"
+MASK_4="0x00000000000000fe"
+MASK_5="0x000000000000fe00"
+MASK_6="0x000000fe00000000"
+MASK_7="0x0000fe0000000000"
+MEMBIND="--mem-bind=map_mem:3,3,1,1,0,0,2,2"
+CPU_MASK="--cpu-bind=mask_cpu:${MASK_0},${MASK_1},${MASK_2},${MASK_3},${MASK_4},${MASK_5},${MASK_6},${MASK_7}"
+
+#srun -n ${NPROC} -N 16 --ntasks-per-node=8 --cpus-per-task=7 ${CPU_MASK} ${MEMBIND} ./launcher.sh  ${PROG} -i ./improved.xml -geom ${GEOM} -iogeom ${IOGEOM} ${GPUDIRECT}
+#cmd="srun -n $((nodes*8)) -N $nodes --unbuffered --gpus-per-node=8 --ntasks-per-node=8 --cpus-per-task=7 --distribution=*:block --gpu-bind=closest ${APP}"
+cmd="srun -n $((nodes*8)) -N $nodes --ntasks-per-node=8 --cpus-per-task=7 ${CPU_MASK} ${MEMBIND} ${APP}"
 
 echo COMMAND: $cmd >> $output
 $cmd
