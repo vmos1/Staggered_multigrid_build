@@ -1,5 +1,5 @@
-# Script to generate scripts for buildig QUDA and MILC for Staggered Multigrid on Summit, Crusher and Frontier supercomputers
-## Example run: python build_install_scripts.py --machine frontier -bdir temp/temp2
+# Script to generate scripts for buildig QUDA and MILC for Staggered Multigrid on the Summit supercomputer.
+## Example run: python build_install_scripts.py -bdir temp/temp2
 '''Code does the following: 
 Creates parent directory
 3 directories install, install_scripts, QUDA/src
