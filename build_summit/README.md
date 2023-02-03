@@ -1,10 +1,11 @@
 # Instructions for building and running Staggered Multigrid on Summit
-We need to build QUDA and MILC in sequence.  QUDA can be built with a single script. Due to the need to edit some files in MILC after download, it is built in two steps.
+We need to build QUDA and MILC in sequence.  QUDA and MILC can each be built with a single script.
 The procedure is described below.
 ## **Generate build scripts**: 
 You need 2 directories: ```build_dir``` and ```run_dir```.
 - **Using the python script**  :
-  - Run the script [build_summit/build_install_scripts_summit.py](https://github.com/vmos1/Staggered_multigrid_build/blob/main/build_summit/build_install_scripts_summit.py) as `python build_install_scripts_summit.py -bdir <build_dir>`. It will copy all install scripts to the desired location in `build_dir`.
+  - Run the script [build_summit/build_install_scripts_summit.py](https://github.com/vmos1/Staggered_multigrid_build/blob/main/build_summit/build_install_scripts_summit.py) as `python build_install_scripts_summit.py -bdir <build_dir>`. 
+  - It will create <build_dir> and copy all install scripts to the desired location in `build_dir`.
 
  **OR Alternatively**  
 - **Manually copy and edit scripts** : 
