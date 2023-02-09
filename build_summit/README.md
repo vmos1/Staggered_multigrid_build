@@ -16,7 +16,7 @@ You need 2 directories: ```build_dir``` and ```run_dir```.
 | -- | -- |
 | `export BUILD_DIR=<build_dir>`| Setup paths |
 | `cd $BUILD_DIR` | Enter build directory |
-| ` mkdir QUDA/src install install_scripts` | Manually create 3 empty directories inside `build_dir`  |
+| ` mkdir QUDA install QUDA/src` | Manually create 3 empty directories inside `build_dir`  |
 | `cp -r <repo_dir>/build_summit/install_scripts $BUILD_DIR/` | Copy the folder [*build_summit/install_scripts*](https://github.com/vmos1/Staggered_multigrid_build/tree/main/build_summit/install_scripts) to `<build_dir>/` |
 
 
