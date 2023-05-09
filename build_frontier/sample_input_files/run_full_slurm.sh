@@ -1,22 +1,22 @@
 #!/bin/bash
 
-#SBATCH -A lgt104
+#SBATCH -A PHY157-ecphisq
 #SBATCH -J QudaStagMG
 #SBATCH -o %x-%j.out
-#SBATCH -t 02:00:00
-#SBATCH -N 108
+#SBATCH -t 03:00:00
+#SBATCH -N 288
 #SBATCH -C nvme
 #SBATCH --cpus-per-task=7
 #SBATCH --ntasks-per-node=8
 
-nodes=108
+nodes=288
 source ${BUILD_DIR}/install_scripts/setup_env_crusher.sh
 
 executable=${BUILD_DIR}/milc_qcd/ks_spectrum/ks_spectrum_hisq
 input=input-full.kpp
 output=output-full.kpp
 
-node_geom="6 3 6 8"
+node_geom="4 6 6 16"
 io_geom="${node_geom}"
 runargs="-qmp-geom ${node_geom} -qmp-alloc-map 3 2 1 0 -qmp-logic-map 3 2 1 0"
 
@@ -69,8 +69,6 @@ MASK_7="0x0000fe0000000000"
 MEMBIND="--mem-bind=map_mem:3,3,1,1,0,0,2,2"
 CPU_MASK="--cpu-bind=mask_cpu:${MASK_0},${MASK_1},${MASK_2},${MASK_3},${MASK_4},${MASK_5},${MASK_6},${MASK_7}"
 
-#srun -n ${NPROC} -N 16 --ntasks-per-node=8 --cpus-per-task=7 ${CPU_MASK} ${MEMBIND} ./launcher.sh  ${PROG} -i ./improved.xml -geom ${GEOM} -iogeom ${IOGEOM} ${GPUDIRECT}
-#cmd="srun -n $((nodes*8)) -N $nodes --unbuffered --gpus-per-node=8 --ntasks-per-node=8 --cpus-per-task=7 --distribution=*:block --gpu-bind=closest ${APP}"
 cmd="srun -n $((nodes*8)) -N $nodes --ntasks-per-node=8 --cpus-per-task=7 ${CPU_MASK} ${MEMBIND} ${APP}"
 
 echo COMMAND: $cmd >> $output
