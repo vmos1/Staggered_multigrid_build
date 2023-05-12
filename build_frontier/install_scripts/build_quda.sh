@@ -15,7 +15,7 @@ QUDA_BUILD=${WORKDIR}/QUDA/build
 pushd .
 if [ ! -d $QUDA_SRC ]
 then
-#git clone --branch feature/hip-compile-fixes https://github.com/lattice/quda $QUDA_SRC # clone QUDA to the desired directory
+##  git clone --branch feature/hip-compile-fixes https://github.com/lattice/quda $QUDA_SRC # clone QUDA to the desired directory
 git clone --branch develop https://github.com/lattice/quda $QUDA_SRC # clone QUDA to the desired directory
 
 else
