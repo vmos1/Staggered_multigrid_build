@@ -10,7 +10,7 @@
 #SBATCH --ntasks-per-node=8
 
 nodes=8
-source ${BUILD_DIR}/install_scripts/setup_env_crusher.sh
+source ${BUILD_DIR}/install_scripts/setup_env.sh
 
 executable=${BUILD_DIR}/milc_qcd/ks_spectrum/ks_spectrum_hisq
 input=input-tune.kpp

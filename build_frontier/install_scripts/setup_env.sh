@@ -12,7 +12,6 @@ module load gcc-mixed/12.2.0
 module list
 
 export MPICH_ROOT=/opt/cray/pe/mpich/8.1.25
-export MPICH_ROOT=/opt/cray/pe/mpich/8.1.25
 export GTL_ROOT=/opt/cray/pe/mpich/8.1.25/gtl/lib
 export MPICH_DIR=${MPICH_ROOT}/ofi/amd/5.0
  

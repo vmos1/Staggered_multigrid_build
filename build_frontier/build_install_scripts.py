@@ -27,20 +27,25 @@ def f_build_env_script(dict_pars,fname):
     ### Setup env
     env_strg='''#!/bin/bash
 #############
-
-module load craype-accel-amd-gfx90a
-module load cray-mpich/{cray_mpich}
 module load cmake
-module load rocm/{rocm}
+module load cpe/23.03
+module load craype-accel-amd-gfx90a
+module load PrgEnv-amd
+module load amd/5.4.3
+module load cray-mpich/{cray_mpich}
+module load gcc-mixed/12.2.0
+
 module list
 
 export MPICH_ROOT=/opt/cray/pe/mpich/{cray_mpich}
-export MPICH_DIR=${{MPICH_ROOT}}/ofi/crayclang/10.0
+export GTL_ROOT=/opt/cray/pe/mpich/{cray_mpich}/gtl/lib
+export MPICH_DIR=${{MPICH_ROOT}}/ofi/amd/5.0
+ 
+MPI_CFLAGS="${{CRAY_XPMEM_INCLUDE_OPTS}} -I${{MPICH_DIR}}/include "
+MPI_LDFLAGS="L/opt/cray/libfabric/1.15.0.0/lib64  -Wl,-rpath=/opt/cray/libfabric/1.15.0.0/lib64 ${{CRAY_XPMEM_POST_LINK_OPTS}} -lxpmem  -Wl,-rpath=${{MPICH_DIR}}/lib -L${{MPICH_DIR}}/lib -lmpi -Wl,-rpath=${{GTL_ROOT}} -L${{GTL_ROOT}} -lmpi_gtl_hsa -L${{ROCM_PATH}}/llvm/lib
+-Wl,-rpath=${{ROCM_PATH}}/llvm/lib"
 
 ## These must be set before running
-
-#export SRCROOT=${{BUILD_DIR}}/../src
-#export BUILDROOT=${{BUILD_DIR}}/build
 export INSTALLROOT=${{BUILD_DIR}}/install
 export GPU_TARGET=gfx90a
 
@@ -192,7 +197,7 @@ if __name__=="__main__":
     dict_pars['machine']  = args.machine
     
     ## Define cray-mpich and rocm versions to use in setupfile
-    dict_pars['cray_mpich']='8.1.14'
+    dict_pars['cray_mpich']='8.1.25'
     dict_pars['rocm']      ='4.5.2'
     # Create empty directories
     
