@@ -45,9 +45,7 @@ export MPICH_OFI_NIC_VERBOSE=2
 export APP="$executable $runargs $input $output"
 echo ${APP} >> ${output}
 
-export QUDA_RESOURCE_PATH=${PROGDIR}
 export QUDA_PROFILE_OUTPUT_BASE=profile_64
-
 ##
 export GPUDIRECT=" -gpudirect "
 export MPICH_OFI_NIC_POLICY=NUMA

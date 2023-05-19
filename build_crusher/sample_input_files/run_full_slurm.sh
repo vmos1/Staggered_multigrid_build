@@ -10,7 +10,7 @@
 #SBATCH --ntasks-per-node=8
 
 nodes=108
-source ${BUILD_DIR}/install_scripts/setup_env.sh
+source ${BUILD_DIR}/install_scripts/setup_env_crusher.sh
 
 executable=${BUILD_DIR}/milc_qcd/ks_spectrum/ks_spectrum_hisq
 input=input-full.kpp
@@ -45,7 +45,6 @@ export MPICH_OFI_NIC_VERBOSE=2
 export APP="$executable $runargs $input $output"
 echo ${APP} >> ${output}
 
-export QUDA_RESOURCE_PATH=${PROGDIR}
 export QUDA_PROFILE_OUTPUT_BASE=profile_64
 
 ##
