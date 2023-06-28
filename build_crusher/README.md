@@ -34,7 +34,7 @@ This should build both QUDA and MILC.
 | ```cd <run_dir>``` | Enter run directory |
 | ```cp <repo_dir>/build_crusher/sample_input_files/* .```  | Copy the input files from [build_crusher/sample_input_files](https://github.com/vmos1/Staggered_multigrid_build/tree/main/build_crusher/sample_input_files) to the required location |
 | ```mkdir rand``` | Create directory for storing random numbers | 
-| ```ln -s /gpfs/alpine/proj-shared/lgt104/detar/lat``` | Create sym link for gauge configuration | 
+| ```ln -s /lustre/orion/lgt104/proj-shared/detar/lat``` | Create sym link for gauge configuration | 
 | Edit the `input*.kpp` and `mgparams*.txt` files | Edit for varying local volume, MG layers, etc. | 
 | `export BUILD_DIR=<build_dir>`| Setup build path |
 | ```sbatch run_tune_slurm.sh``` | Submit tuning run |
